@@ -1,0 +1,457 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+
+<section class="">
+    {% comment %} {% for post in post_list %}
+    {{post.post_title}}
+    {% endfor %} {% endcomment %}
+    <div class="container">
+        <div class="heading-title">
+            <h2>Breaking News
+            </h2>
+        </div>
+        <div class="news-item">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <figure class="article-image">
+                        <img src="{% static 'images/article-image.jpg' %}" class="img-fluid w-100" alt="">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="coontent-wrapper">
+                        <div class="sub-heading">
+                            <h3><a href="{% url 'blog:detail' 1 %}">The UK began its Covid-19 vaccination program.</a>
+                            </h3>
+                            <p>90-year-old Margaret Keenan was the first person to receive the Pfizer/BioNTech
+                                jab; William Shakespeare, 81, was the second (seriously).90-year-old Margaret
+                                Keenan was the first person to receive the Pfizer/BioNTech jab; William
+                                Shakespeare, 81, was the second (seriously).90-year-old Margaret Keenan was th
+                            </p>
+                            <div class="bottom-widget">
+                                <ul>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                        <span class="value">100</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                        <span class="value">32</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                        <span class="value">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-item noborder no-innerpadding">
+            <div class="coontent-wrapper">
+                <div class="sub-heading">
+                    <h3>Mastercard is reviewing its business ties to Pornhub </h3>
+                    <p>Following a New York Times story about the porn site’s failure to take down and report
+                        videos that allegedly feature child rape and assault, the payments company launched an
+                        investigation into illegal activity.</p>
+                    <div class="bottom-widget">
+                        <ul>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                <span class="value">100</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                <span class="value">32</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                <span class="value">12</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item noborder no-innerpadding">
+            <div class="coontent-wrapper">
+                <div class="sub-heading">
+                    <h3>Uber is selling its self-driving car division</h3>
+                    <p>It will invest $400 million into the buyer, Aurora Industries, which also has backing
+                        from Amazon. Uber CEO Dara Khosrowshahi will join Aurora’s board.</p>
+                    <div class="bottom-widget">
+                        <ul>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                <span class="value">100</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                <span class="value">32</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                <span class="value">12</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item noborder no-innerpadding">
+
+            <div class="coontent-wrapper">
+                <div class="sub-heading">
+                    <h3>A CEO quit because his wife’s “professional ambitions should take priority</h3>
+                    <p>Rubin Ritter has been one of the three chief executives of Zalando, Europe’s largest
+                        online fashion retailer, since 2010. The statement announcing his departure doesn’t
+                        mention his wife’s name or what she does.</p>
+                    <div class="bottom-widget">
+                        <ul>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                <span class="value">100</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                <span class="value">32</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                <span class="value">12</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="news-item noborder">
+            <div class="heading-title">
+                <h2>Deeper into the news
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <figure class="article-image h-med">
+                        <img src="{% static 'images/article-image.jpg' %}" class="img-fluid w-100" alt="">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="coontent-wrapper">
+                        <div class="sub-heading">
+                            <h3>The Chinese government is seeking to rein in the fintech industry </h3>
+                            <p>which for years has been under regulated when compared with mainstream banks and
+                                financial services.
+                                This has big consequences for the country’s burgeoning fintech industry, which
+                                has profited greatly from operating under different rules and regulations than
+                                mainstream commercial banks. which for years has been under regulated when
+                                compared with mainstream banks and financial services.
+                                This has big consequences for the country’s burgeoning fintech industry, which
+                                has profited greatly from operating under different rules and regulations than
+                                mainstream commercial banks. </p>
+                            <div class="bottom-widget">
+                                <ul>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                        <span class="value">100</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                        <span class="value">32</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                        <span class="value">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item noborder">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <figure class="article-image h-med">
+                        <img src="{% static 'images/article-image.jpg' %}" class="img-fluid w-100" alt="">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="coontent-wrapper">
+                        <div class="sub-heading">
+                            <h3>Citing two unidentified Japanese sources</h3>
+                            <p>US analyst said China gave North Korean leader Kim Jong Un a COVID-19 vaccine.
+
+                                Wisconsin and Arizona certify their election results, confirming President-elect
+                                Joe Biden as the winner in each state.
+                                A 40-year-old trial volunteer in India claims he suffered an adverse reaction to
+                                the AstraZeneca COVID-19 vaccine. US analyst said China gave North Korean leader
+                                Kim Jong Un a COVID-19 vaccine.
+                                Wisconsin and Arizona certify their election results, confirming President-elect
+                                Joe Biden as the winner in each state.
+
+                                US analyst said China gave North Korean leader Kim Jong Un a COVID-19 vaccine.
+                                Wisconsin and Arizona certify their election results, confirming President-elect
+                                Joe Biden as the winner in each state.
+                                A 40-year-old trial volunteer in India claims he suffered an adverse reaction to
+                                the AstraZeneca COVID-19 vaccine.
+
+                            </p>
+                            <div class="bottom-widget">
+                                <ul>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                        <span class="value">100</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                        <span class="value">32</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                        <span class="value">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item noborder">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <figure class="article-image h-med">
+                        <img src="{% static 'images/article-image.jpg' %}" class="img-fluid w-100" alt="">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="coontent-wrapper">
+                        <div class="sub-heading">
+                            <h3>The Chinese government is seeking to rein in the fintech industry </h3>
+                            <p>which for years has been under regulated when compared with mainstream banks and
+                                financial services.
+                                This has big consequences for the country’s burgeoning fintech industry, which
+                                has profited greatly from operating under different rules and regulations than
+                                mainstream commercial banks. which for years has been under regulated when
+                                compared with mainstream banks and financial services.
+                                This has big consequences for the country’s burgeoning fintech industry, which
+                                has profited greatly from operating under different rules and regulations than
+                                mainstream commercial banks. </p>
+                            <div class="bottom-widget">
+                                <ul>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                        <span class="value">100</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                        <span class="value">32</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                        <span class="value">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding30">
+            <div class="">
+                <div class="heading-title">
+                    <h2>How Elon Musk Found Stock Success in 2020</h2>
+                </div>
+                <div class="video-article">
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/_uQrJ0TkZlc" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding30">
+            <div class="">
+                <div class="heading-title">
+                    <h2>Finance</h2>
+                </div>
+                <div class="stats">
+                    <!-- <figure class="mb-4">
+                                    <img src="images/stats.png" class="img-fluid" alt="">
+                                </figure> -->
+                    <!-- <h2 id="symbol">Symbol <span>SQ</span></h2> -->
+                    <table class="table table-striped" id="finance-chart">
+                        <!-- <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Open</th>
+                                            <th>High</th>
+                                            <th>Low</th>
+                                            <th>Close</th>
+                                            <th>Volume</th>
+                                            
+                                        </tr>
+                                    </thead> -->
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <p>Biden met with the bigwigs of biggest companies in the US and markets responded well to
+                        the news
+
+
+                    </p>
+                    <p>The Financial Technology industry, more commonly known as the “FinTech” industry is
+                        expected to grow to US$309.98 billion at an annual growth rate of 24.8% through to the
+                        year 2022. Any company now that uses technology to enhance financial activities can be
+                        categorized into this industry.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-padding30">
+            <div class="">
+                <div class="heading-title">
+                    <h2>Industry focus: FinTech</h2>
+                </div>
+                <div class="stats">
+                    <figure class="mb-4">
+                        <img src="{% static 'images/graph.png' %}" class="img-fluid" alt="">
+                    </figure>
+                    <p>Biden met with the bigwigs of biggest companies in the US and markets responded well to
+                        the news
+
+
+                    </p>
+                    <p>The Financial Technology industry, more commonly known as the “FinTech” industry is
+                        expected to grow to US$309.98 billion at an annual growth rate of 24.8% through to the
+                        year 2022. Any company now that uses technology to enhance financial activities can be
+                        categorized into this industry.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news-item noborder">
+            <div class="heading-title">
+                <h2>Lifestyle</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <figure class="article-image h-banner">
+                        <img src="{% static 'images/big-image.jpg' %}" class="img-fluid w-100" alt="">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="coontent-wrapper">
+                        <div class="sub-heading">
+                            <div class="heading-withbutton">
+                                <div class="heading-left">
+                                    <h3>Ice skating at Cityplaza Ice Palace </h3>
+                                    <p>Although it won’t snow in Hong Kong, you can still experience a winter
+                                        wonderland at Cityplaza Ice Palace. </p>
+                                </div>
+                                <div class="button-right">
+                                    <a href="#" class="theme-btn">Reserve</a>
+                                </div>
+                            </div>
+                            <div class="bottom-widget">
+                                <ul>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                        <span class="value">100</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                        <span class="value">32</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                        <span class="value">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item noborder">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <figure class="article-image h-banner">
+                        <img src="{% static 'images/big-image.jpg' %}" class="img-fluid w-100" alt="">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="coontent-wrapper">
+                        <div class="sub-heading">
+                            <div class="heading-withbutton">
+                                <div class="heading-left">
+                                    <h3>Ice skating at Cityplaza Ice Palace </h3>
+                                    <p>Although it won’t snow in Hong Kong, you can still experience a winter
+                                        wonderland at Cityplaza Ice Palace. </p>
+                                </div>
+                                <div class="button-right">
+                                    <a href="#" class="theme-btn">Reserve</a>
+                                </div>
+                            </div>
+                            <div class="bottom-widget">
+                                <ul>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                        <span class="value">100</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                        <span class="value">32</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                        <span class="value">12</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+
+{% comment %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    {% if post_list %}
+    <ul>
+        {% for post in post_list %}
+        <h1>{{ post.post_title }}</h1>
+        {{ post.post_content}}
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No post are available.</p>
+    {% endif %}
+</body>
+
+</html> {% endcomment %}

@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+<div class="news-item">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <figure class="article-image">
+                <img src="{% static 'images/article-image.jpg' %}" class="img-fluid w-100" alt="">
+            </figure>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="coontent-wrapper">
+                <div class="sub-heading">
+                    <h3>The UK began its Covid-19 vaccination program. </h3>
+                    <p>90-year-old Margaret Keenan was the first person to receive the Pfizer/BioNTech
+                        jab; William Shakespeare, 81, was the second (seriously).90-year-old Margaret
+                        Keenan was the first person to receive the Pfizer/BioNTech jab; William
+                        Shakespeare, 81, was the second (seriously).90-year-old Margaret Keenan was th
+                    </p>
+                    <div class="bottom-widget">
+                        <ul>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/eye.svg' %}" alt=""></span>
+                                <span class="value">100</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/chat.svg' %}" alt=""></span>
+                                <span class="value">32</span>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="{% static 'images/share.svg' %}" alt=""></span>
+                                <span class="value">12</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
