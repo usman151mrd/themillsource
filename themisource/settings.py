@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'themisource.wsgi.application'
 if DEVELOPMENT_MODE is True:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'themisource',
             'USER': 'usman',
             'PASSWORD': 'Fa@12345',
             'HOST': 'localhost',
-            'PORT': '3306',
+            'PORT': '5432',
         },
         "sqlite": {
             "ENGINE": "django.db.backends.sqlite3",
