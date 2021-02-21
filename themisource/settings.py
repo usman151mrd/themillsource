@@ -89,10 +89,10 @@ if DEVELOPMENT_MODE is True:
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'themisource',
-            'USER': 'usman',
-            'PASSWORD': 'Fa@12345',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'USER': 'themisource',
+            'PASSWORD': 'huruhujhyob1z8v3',
+            'HOST': 'app-d4dfbce5-3dc3-4fcc-bad7-0102ca3f0a6a-do-user-8599880-0.b.db.ondigitalocean.com',
+            'PORT': '25060',
         },
         "sqlite": {
             "ENGINE": "django.db.backends.sqlite3",

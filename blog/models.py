@@ -25,10 +25,10 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.CharField(max_length=500, null=True)
     keywords = models.CharField(max_length=500, null=True)
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=200)
     meta_title = models.CharField(max_length=500)
     meta_description = models.TextField(null=True)
-    feature_image_url = models.ImageField()
+    feature_image_url = models.ImageField(max_length=1000)
 
     def __str__(self):
         return self.post_title
