@@ -172,3 +172,5 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# Gio IP path
+GEOIP_PATH = os.path.join(BASE_DIR, "GeoLite2")
