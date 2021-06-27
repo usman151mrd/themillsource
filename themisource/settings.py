@@ -91,7 +91,7 @@ if DEVELOPMENT_MODE is True:
             'NAME': 'themisource',
             'USER': 'themisource',
             'PASSWORD': 'huruhujhyob1z8v3',
-            'HOST': 'app-d4dfbce5-3dc3-4fcc-bad7-0102ca3f0a6a-do-user-8599880-0.b.db.ondigitalocean.com',
+            'HOST': 'localhost',
             'PORT': '25060',
         },
         "sqlite": {
