@@ -88,11 +88,11 @@ if DEVELOPMENT_MODE is True:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'themisource',
-            'USER': 'themisource',
-            'PASSWORD': 'huruhujhyob1z8v3',
+            'NAME': 'tms',
+            'USER': 'usman',
+            'PASSWORD': 'Fa@12345',
             'HOST': 'localhost',
-            'PORT': '25060',
+            'PORT': '5432',
         },
         "sqlite": {
             "ENGINE": "django.db.backends.sqlite3",

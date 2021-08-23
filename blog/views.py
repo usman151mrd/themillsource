@@ -32,11 +32,11 @@ class IPTestView(generic.ListView):
     def get_queryset(self):
         ip = get_client_ip(self.request)
         g = GeoIP2()
-        response = g.country(ip)
+        response = g.country('119.160.103.84')
         return response
 
 
-class DetailView(generic.DetailView):
+class DetailView(generic.ListView):
     model = Post
     template_name = 'blog/detail.html'
 
@@ -48,3 +48,11 @@ def listing(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'list.html', {'page_obj': page_obj})
+
+
+def home_page(request):
+    news_list = Post.objects.filter(category=1).order_by('post_date')[:3]
+    lifestyle_list = Post.objects.filter(category=2)
+    context = {'news_list': news_list, 'lifestyle': lifestyle_list}
+    return render(request, 'blog/home.html', context)
+
