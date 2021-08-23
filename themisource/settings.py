@@ -19,7 +19,8 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEVELOPMENT_MODE = True  #os.getenv("DEVELOPMENT_MODE", "False") == "True"
+DEVELOPMENT_MODE = True
+# os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -88,11 +89,11 @@ if DEVELOPMENT_MODE is True:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'tms',
-            'USER': 'usman',
-            'PASSWORD': 'Fa@12345',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'NAME': 'themisource',
+            'USER': 'themisource',
+            'PASSWORD': 'huruhujhyob1z8v3',
+            'HOST': 'app-d4dfbce5-3dc3-4fcc-bad7-0102ca3f0a6a-do-user-8599880-0.b.db.ondigitalocean.com',
+            'PORT': '25060',
         },
         "sqlite": {
             "ENGINE": "django.db.backends.sqlite3",
