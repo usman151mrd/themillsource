@@ -1,22 +1,345 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_light.css' %}">
+    <title>Home </title>
 </head>
-<body>
-{% for news in news_list %}
-    <h1>{{ news.post_title }}</h1>
-    <p>{{ news.post_content }}</p>
-    <b><strong>{{ news.seen }}</strong></b>
-{% endfor %}
-<h1> Life Style news here</h1>
-{% for news in lifestyle_list %}
-    <h1>{{ news.post_title }}</h1>
-    <p>{{ news.post_content }}</p>
-    <b><strong>{{ news.seen }}</strong></b>
-{% endfor %}
 
+<body>
+    <div class="container">
+        <header>
+            <div class="inner">
+                <div class="left-content">
+                    <div class="menu-button">
+                        <img src="{% static 'icons/Menu_dark.svg' %}" alt="menu">
+                    </div>
+
+                    <div class="view">
+                        <img src="{% static 'icons/top_views.svg' %}" alt="views">
+                        <div class="overlay-text">25K</div>
+                    </div>
+
+                </div>
+                <div class="center-content">
+                    <h1 class="title">TMS</h1>
+                </div>
+
+                <div class="right-content">
+
+                    <div class="theme-change-button">
+                        <img src="{% static 'icons/light.svg' %}" alt="">
+                    </div>
+                    <div class="current-date">
+                        Monday, April 12, 2021
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="banner">
+                <h1>Good morning</h1>
+                <div class="subscription">
+                    <div class="news-letter">
+                        <strong>SUBSCRIBE TO THE TMS NEWSLETTER</strong>
+                        <div class="signup-form">
+                            <img src="{% static 'icons/email_dark.svg' %}" alt="email">
+                            <input type="text" placeholder="Email">
+                            <button type="submit">Sign up</button>
+                        </div>
+                        <p>By providing your email, you agree to our Privacy Policy</p>
+                    </div>
+                    <div class="share">
+                        <h2>Share this page using the link down below</h2>
+                        <button class="copy-btn">
+                            <img src="{% static 'icons/copy-link.svg' %}" alt="copy link">
+                            <span>Copy link</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="twenty-four-news">
+                <h1>IN THE LAST 24 HOURS...</h1>
+                <hr>
+                <div class="new-container">
+                    <section class="news-with-image">
+                        <img src="{% static 'images/america-inequality-coronavirus-1587146011346-facebookJumbo 3.png' %}"
+                            alt="covid">
+                        <h1>Arkansas becomes first U.S. state to ban treatments for transgender youth</h1>
+                        <p>Overriding a veto by Governor Asa Hutchinson, Arkansas has become the first US state to ban
+                            certain types of treatment for transgender youth.</p>
+                        <div class="news-stats">
+                            <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                            <span>10,543</span>
+                        </div>
+                    </section>
+                    <section class="news-list">
+                        <section class="news">
+                            <h1>Eating our lunch: Biden points to China in development push</h1>
+                            <p>US President Joe Biden is pointing to a booming, ambitious China in his push for
+                                trillions of dollars in development spending.</p>
+                            <div class="news-stats">
+                                <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                                <span>10,543</span>
+                            </div>
+                        </section>
+                        <section class="news">
+                            <h1>World Bank chief expects G20 to extend debt payment freeze through end-2021</h1>
+                            <p>The World Bank president expects China, the US and other G20 major economies to extend a
+                                freeze in bilateral debt service payments through the end of 2021.</p>
+                            <div class="news-stats">
+                                <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                                <span>10,543</span>
+                            </div>
+                        </section>
+                        <section class="news">
+                            <h1>Eating our lunch: Biden points to China in development push</h1>
+                            <p>US President Joe Biden is pointing to a booming, ambitious China in his push for
+                                trillions of dollars in development spending.</p>
+                            <div class="news-stats">
+                                <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                                <span>10,543</span>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </section>
+            <section class="markets">
+                <div class="markets-wrapper">
+                    <div class="inner">
+                        <h1>MARKETS</h1>
+                        <hr>
+                    </div>
+                    <div class="markets-data">
+                        <div class="row">
+                            <div>
+                                <img src="{% static 'icons/Arrowg.svg' %}" alt="">
+                            </div>
+                            <div>Nasdaq</div>
+                            <div>11,224,334</div>
+                            <div>+32.32%</div>
+                        </div>
+                        <div class="row">
+                            <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
+                            <div>S&P</div>
+                            <div>8,542,356</div>
+                            <div>+10.11%</div>
+                        </div>
+                        <div class="row">
+                            <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
+                            <div>Dow</div>
+                            <div>29,467,423</div>
+                            <div>+5.52%</div>
+                        </div>
+                        <div class="row">
+                            <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
+                            <div>Gold</div>
+                            <div>1,464,245</div>
+                            <div>+24.73%</div>
+                        </div>
+                        <div class="row">
+                            <div><img src="{% static 'icons/Arrowr.svg' %}" alt=""></div>
+                            <div>10-YR</div>
+                            <div>0.835%</div>
+                            <div>-14.32%</div>
+                        </div>
+                        <div class="row">
+                            <div><img src="{% static 'icons/Arrowr.svg' %}" alt=""></div>
+                            <div>OIL</div>
+                            <div>42.17</div>
+                            <div>-6.22%</div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, cum consectetur amet orci non ut
+                        et. Amet, et sagittis, cras id est adipiscing platea ultricies. Ullamcorper dictumst platea
+                        nullam dignissim non euismod et elementum sed. Quis maecenas venenatis lorem quis faucibus
+                        bibendum luctus vestibulum.</p>
+                </div>
+            </section>
+
+            <!-- biggets topic driving our office -->
+            <section class="hot-topics">
+                <h1>The biggest topics driving our newsroom</h1>
+                <div class="topic">
+                    <div class="image-holder">
+                        <img src="{% static 'images/topic1_image.png' %}" alt="" srcset="">
+                        <hr>
+                        <div class="image-holder-footer">
+                            <div>
+                                <img src="{% static 'icons/comments_dark.svg' %}" alt="" srcset="">
+                            </div>
+                            <div>
+                                <img src="{% static 'icons/likes_dark.svg' %}" alt="" srcset="">
+                                <span>10,543</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-holder">
+                        <div class="topic-title">
+                            Will 2024 see both Biden and Trump running for president again?
+                        </div>
+                        <div class="topic-detail">
+                            <div>The rundown:</div>
+                            <p>
+                                Biden has recently confirmed his intentions to run again in 2024 and though Trump seems
+                                to still be on the fence, the ticket could end up looking like it did in 2020. But with
+                                the Biden administration putting VP Harris front and center, it could also end up
+                                looking like a very different campaign altogether.</p>
+                            <br>
+                            <div>Why it matters: </div>
+                            <p>Biden’s age has been a subject of criticism from Republicans and Trump has so far only
+                                been a one-term president, so others seem to be gearing up to take their places in their
+                                respective parties. The question that might matter the most, though, is how the
+                                Republican Party can fare in a post-Trump world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic">
+                    <div class="text-holder">
+                        <div class="topic-title">
+                            While transgender rights are making gains at the federal level, states are pushing back
+                        </div>
+                        <div class="topic-detail">
+                            <div>The rundown:</div>
+                            <p>
+                                Though 2021 has brought the transgender community some victories thanks to the new Biden
+                                administration, it has continued to be a tough year for trans rights at the state level.
+                                There are currently multiple state bills being considered that would limit medical
+                                access for trans youth and bar trans athletes from competing according to their gender
+                                identity.</p>
+                            <br>
+                            <div>Why it matters: </div>
+                            <p>While Joe Biden is making a point of being an ally to the LGBTQ community, state
+                                legislatures can still pass anti-trans legislation so long as more comprehensive
+                                pro-trans legislation hasn’t been passed at the federal level. Many of these proposed
+                                laws will likely set up legal battles that could force the Supreme Court to rule more
+                                directly on what constitutes discrimination based on gender identity.</p>
+                        </div>
+                    </div>
+                    <div class="image-holder">
+                        <img src="{% static 'images/topic2_image.png' %}" alt="" srcset="">
+                        <hr>
+                        <div class="image-holder-footer">
+                            <div>
+                                <img src="{% static 'icons/comments_dark.svg' %}" alt="" srcset="">
+                            </div>
+                            <div>
+                                <img src="{% static 'icons/likes_dark.svg' %}" alt="" srcset="">
+                                <span>10,543</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic">
+                    <div class="image-holder">
+                        <img src="{% static 'images/topic3_image.png' %}" alt="" srcset="">
+                        <hr>
+                        <div class="image-holder-footer">
+                            <div>
+                                <img src="{% static 'icons/comments_dark.svg' %}" alt="" srcset="">
+                            </div>
+                            <div>
+                                <img src="{% static 'icons/likes_dark.svg' %}" alt="" srcset="">
+                                <span>10,543</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-holder">
+                        <div class="topic-title">
+                            Everything you need to know about the new Georgia voting law
+                        </div>
+                        <div class="topic-detail">
+                            <div>The rundown:</div>
+                            <p>
+                                A new law signed by Georgia’s governor would dramatically reshape the state’s elections
+                                going forward. While the creators of the new law say they created it to help ensure
+                                election integrity, critics, including US President Joe Biden, argue the law is designed
+                                to make it harder for Black Americans and other minorities to vote.</p>
+                            <br>
+                            <div>Why it matters: </div>
+                            <p>Unsupported claims of widespread election fraud in the 2020 US presidential election have
+                                led multiple Republican-led states to revise their voting laws. The law may force
+                                Democrats, many of whom fear such laws are being used to restrict the rights of people
+                                of color, to unify behind a federal election law that would make voting easier.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-list">
+                <h2>A BREAK FROM THE NEWS</h2>
+                <hr>
+                <div class="info">
+                    <div class="row1">
+                        <div class="info-title">
+                            <span class="title-date">MAY 4, 2021</span>
+                            <h1>The 7 best restaurants in Soho, Hong Kong</h1>
+                            <button>Read More</button>
+                        </div>
+                        <div class="info-detail">
+                            Take the escalators from Central to Mid-Levels to hit SoHo, one of Hong Kong’s most famous
+                            foodie districts. The best restaurants in Soho, Hong Kong are top-notch, serving cuisine...
+                        </div>
+                    </div>
+                    <div class="info-image">
+                        <img src="{% static 'images/image_6.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="row1">
+                        <div class="info-title">
+                            <span class="title-date">MAY 4, 2021</span>
+                            <h1>A local’s guide to secret spots in Los Angeles</h1>
+                            <button>Read More</button>
+                        </div>
+                        <div class="info-detail">
+                            You might wonder how there could possibly be any secret spots left in Los Angeles, a city
+                            overrun with bloggers, tourists and social media monsters. La La Land wreaks of...
+                        </div>
+                    </div>
+
+                    <div class="info-image">
+                        <img src="{% static 'images/image_7.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="row1">
+                        <div class="info-title">
+                            <span class="title-date">MAY 4, 2021</span>
+                            <h1>What is the importance of Earth Day?</h1>
+                            <button>Read More</button>
+                        </div>
+                        <div class="info-detail">
+                            For more than 50 years now, the importance of Earth Day has been globally celebrated ever
+                            since
+                            the first celebration of Earth was held on April 22, 1970. Leading an...
+                        </div>
+                    </div>
+                    <div class="info-image">
+                        <img src="{% static 'images/image_8.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="social">
+                <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+                <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+                <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+                <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+                <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+            </section>
+            <section class="copy-right">
+                The Millennial Source Ltd. 2021
+            </section>
+        </footer>
+    </div>
 
 </body>
+
 </html>
