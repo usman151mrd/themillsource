@@ -6,9 +6,10 @@ app_name = 'blog'
 urlpatterns = [
     path('', views.IndexView.as_view()),
     path('iptest/', views.IPTestView.as_view()),
-    path('<int:pk>/', views.DetailView.as_view(), name ='detail'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     # path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     # path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     # path('<int:question_id>/vote/', views.vote, name='vote'),
-    path('home/', views.home_page)
+    path('home/', views.home_page),
+    path('about-us/', views.about_us_page)
 ]

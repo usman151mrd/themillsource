@@ -56,3 +56,6 @@ def home_page(request):
     context = {'news_list': news_list, 'lifestyle': lifestyle_list}
     return render(request, 'blog/home.html', context)
 
+
+def about_us_page(request):
+    return render(request, 'blog/about_us.html')
