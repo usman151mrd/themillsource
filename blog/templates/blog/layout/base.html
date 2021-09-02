@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_light.css' %}">
+    <title>Home </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="inner">
+                <div class="left-content">
+                    <div class="menu-button">
+                        <img src="{% static 'icons/Menu_dark.svg' %}" alt="menu">
+                    </div>
+
+                    <div class="view">
+                        <img src="{% static 'icons/top_views.svg' %}" alt="views">
+                        <div class="overlay-text">25K</div>
+                    </div>
+
+                </div>
+                <div class="center-content">
+                    <h1 class="title">TMS</h1>
+                </div>
+
+                <div class="right-content">
+
+                    <div class="theme-change-button">
+                        <img src="{% static 'icons/light.svg' %}" alt="">
+                    </div>
+                    <div class="current-date">
+                        Monday, April 12, 2021
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+        <footer>
+            <section class="social">
+                <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+                <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+                <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+                <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+                <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+            </section>
+            <section class="copy-right">
+                The Millennial Source Ltd. 2021
+            </section>
+        </footer>
+    </div>
+
+</body>
+
+</html>
