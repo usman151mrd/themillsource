@@ -5,11 +5,14 @@
   --background-color-three: #eeefef;
   --background-color-four: #acebf4;
   --background-color-five: #eeefef;
+  --background-color-six: #171717;
+  --background-color-seven:#A0DCFF;
   --border-color-one: #000000;
   --border-color-two: #ffffff;
   --border-color-three: #38b6ff;
   --text-color-one: #ffffff;
   --text-color-two: #000000;
+  --text-color-five: #38b6ff;
 }
 
 /* body  */
@@ -85,6 +88,9 @@ main {
 .info-list ,
 .article-top-wrapper,
 .sponser,
+.about-header,
+.about-news-topics,
+.about-mission,
 .wrapper{
   max-width: 70.625rem;
   margin: 0 auto;
@@ -114,6 +120,7 @@ p {
 }
 .news-letter h4 {
   margin: 0;
+  color: var(--text-color-one);
 }
 .news-letter p {
   font-size: 0.75rem;
@@ -450,7 +457,7 @@ div.info-title {
   /* margin-top: 2.5rem; */
 }
 footer {
-  background-color: var(--background-color-three);
+  background-color: var(--background-color-one);
   margin-top: 1.25rem;
 }
 .social {
@@ -681,4 +688,276 @@ footer {
 .article-copyright{
   background-color: var(--background-color-one);
 }
+/* about us dark mode */
+.about-email-form {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+  background-color: var(--background-color-three);
+}
 
+.email-form {
+  max-width: 39.375rem;
+  margin: auto;
+  background-color: var(--background-color-one);
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
+  border-top-right-radius: 2.1875rem;
+  border-bottom-left-radius: 2.1875rem;
+  /* padding-left: 1.25rem;
+  padding-right: 2.5rem; */
+}
+.email-form h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 2.625rem;
+  text-align: center;
+  margin-left: 1.5625rem;
+}
+.email-form div {
+  margin-left: 1.25rem;
+  margin-right: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.email-form input[type="text"] {
+  border: none;
+  padding: 0.5rem 2.1875rem;
+  flex-grow: 1;
+}
+
+.email-form input[type="text"]:focus {
+  outline: none;
+}
+.email-form hr {
+  flex-basis: 100%;
+  height: 0;
+}
+.email-form input[type="button"] {
+  padding: 0.5rem 2.1875rem;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  align-items: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  background: var(--background-color-six);
+  border-radius: 3px;
+}
+
+.about-header {
+  margin-top: 2.5rem;
+}
+.about-title > div {
+  text-align: right;
+}
+.about-title hr {
+  border: 0.0625rem solid var(--border-color-two);
+}
+.about-title h2 {
+  margin: 0.9375rem 0 0 0;
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.1875rem;
+  text-transform: uppercase;
+  color: var(--text-color-two);
+}
+.about-header-nav {
+  background-color: var(--background-color-three);
+  padding: 1.875rem 7.1875rem;
+  margin-top: 1.875rem;
+  border-top-right-radius: 2.1875rem;
+  border-bottom-left-radius: 2.1875rem;
+}
+
+.about-header-nav div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* .about-header-nav div:first-child p:last-child {
+  color: var(--text-color-five);
+} */
+
+.active-nav{
+  color: var(--text-color-five) !important;
+}
+
+.about-header-nav p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  color: var(--text-color-two);
+  margin: 0;
+  padding: 0;
+}
+
+.about-news-topics > h2 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 2.625rem;
+  text-transform: uppercase;
+  color: var(--text-color-two);
+}
+
+.about-news-topics > p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: var(--text-color-two);
+}
+.about-article {
+  margin-top: 3.125rem;
+  margin-bottom: 1.875rem;
+  /* padding-top: 1.25rem; */
+}
+.article-topic-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  flex-direction: row;
+  margin-top: 1.25rem;
+}
+.article-topic-detail div:first-child {
+  margin-right: 1.25rem;
+}
+.article-topic-detail p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  color: var(--text-color-two);
+}
+.article-topic-detail span {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.8125rem;
+  padding: 0.3125rem auto;
+  color: var(--text-color-two);
+}
+.article-topic-detail img {
+  width: 34.6875rem;
+  height: 19.875rem;
+}
+.article-topic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article-topic-header span:first-child {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 3rem;
+  font-feature-settings: "liga" off;
+  color: var(--text-color-two);
+}
+
+.about-mission {
+  color: var(--text-color-two);
+}
+.about-mission div ,
+.about-mission p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: var(--text-color-two);
+}
+.about-mission > h2 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  text-transform: uppercase;
+}
+.mission-detail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  margin-top: 1.875rem;
+}
+.mission-detail ul {
+  line-height: 2.1875rem;
+  margin-right: 4.375rem;
+  margin-top: 0;
+  /* padding-top: 1.25rem; */
+  display: block;
+}
+
+.mission-detail p{
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2.1875rem;
+  margin-right: 4.375rem;
+  margin-top: 0;
+  /* padding-top: 1.25rem; */
+  display: block;
+  color: var(--text-color-two);
+}
+
+.mission-detail ul li {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+}
+.mission-detail ul li:last-child {
+  padding-top: 1.25rem;
+}
+
+.mission-detail span {
+  background-color: var(--background-color-seven);
+  padding: 2.5rem 3.75rem;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.375rem;
+  /* line-height: 2.625rem; */
+  color: var(--text-color-two);
+}
+
+.about-make-money {
+  background-color: var(--background-color-three);  
+  padding: 2.5rem;
+  border-top-left-radius: 3.125rem;
+  border-bottom-right-radius: 3.125rem;
+}
+.about-make-money h4 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+  color: var(--text-color-two);
+}
+
+.about-make-money p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5625rem;
+  margin-top: 0;
+  color: var(--text-color-two);
+}

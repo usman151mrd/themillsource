@@ -14,6 +14,7 @@
   --text-color-three: #a0a0a0;
   --text-color-four: #606060;
   --text-color-five: #38b6ff;
+  --text-color-six: #a0dcff;
 }
 /* home page dark mode */
 /* body  */
@@ -73,10 +74,7 @@ header .inner {
   align-items: center;
 }
 /* main */
-main {
-  /* max-width: 70.625rem; */
-  /* margin: 0 auto; */
-}
+
 /* banner */
 .banner,
 .twenty-four-news,
@@ -88,7 +86,12 @@ main {
 .article-top-wrapper,
 .about-header,
 .about-news-topics,
-.about-mission {
+.about-mission,
+.buss-header,
+.buss-enq-form-link,
+.buss-cs,
+.buss-pd,
+.buss-audience {
   max-width: 70.625rem;
   margin: 0 auto;
 }
@@ -104,7 +107,7 @@ main {
 }
 .banner .subscription {
   display: grid;
-  grid-template-columns: 2fr 0.9fr;
+  grid-template-columns: 2fr 1fr;
 }
 .news-letter {
   padding: 1.8125rem 7.1875rem;
@@ -125,8 +128,8 @@ main {
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: normal;
-  font-size: .75rem;
-  line-height: .9375rem;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
 }
 
 .signup-form {
@@ -781,13 +784,16 @@ div.info-title {
   border-radius: 3px;
 }
 
-.about-header {
+.about-header,
+.buss-header {
   margin-top: 2.5rem;
 }
-.about-title > div {
+.about-title > div,
+.page-title > div {
   text-align: right;
 }
-.about-title hr {
+.about-title hr,
+.page-title hr {
   border: 0.0625rem solid var(--border-color-two);
 }
 .about-title h2 {
@@ -812,8 +818,12 @@ div.info-title {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.about-header-nav div:first-child p:last-child {
+/* .about-header-nav div:first-child p:last-child {
   color: var(--text-color-five);
+} */
+
+.active-nav {
+  color: var(--text-color-five) !important;
 }
 
 .about-header-nav p {
@@ -899,6 +909,13 @@ div.info-title {
 .about-mission {
   color: var(--text-color-one);
 }
+.about-mission div {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
 .about-mission > h2 {
   font-family: Constantine;
   font-style: normal;
@@ -914,6 +931,17 @@ div.info-title {
   margin-top: 1.875rem;
 }
 .mission-detail ul {
+  line-height: 2.1875rem;
+  margin-right: 4.375rem;
+  margin-top: 0;
+  /* padding-top: 1.25rem; */
+  display: block;
+}
+.mission-detail p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
   line-height: 2.1875rem;
   margin-right: 4.375rem;
   margin-top: 0;
@@ -940,3 +968,111 @@ div.info-title {
   /* line-height: 2.625rem; */
   color: var(--text-color-two);
 }
+.about-make-money {
+  background-color: var(--background-color-three);
+  color: var(--text-color-two);
+  padding: 2.5rem;
+  border-top-left-radius: 3.125rem;
+  border-bottom-right-radius: 3.125rem;
+}
+.about-make-money h4 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.about-make-money p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5625rem;
+  margin-top: 0;
+}
+/* business and case study page */
+.buss-header *,
+.buss-audience *,
+.buss-pd *,
+.buss-cs * {
+  color: var(--text-color-one);
+}
+.buss-offer h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.75rem;
+  line-height: 4.1875rem;
+  text-transform: uppercase;
+  color: var(--text-color-one);
+  margin: 0.9375rem 0 2.5rem 0;
+}
+.buss-offer ul li {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+
+  color: var(--text-color-one);
+}
+.buss-offer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buss-audience h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 3.0625rem;
+  text-transform: uppercase;
+  color: var(--text-color-one);
+}
+.buss-audience > div > div {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+}
+.buss-audience div > div > div:first-child {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.1875rem;
+  text-transform: uppercase;
+  color: var(--text-color-six);
+}
+.buss-audience div > div > div:nth-child(2) {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+  text-align: right;
+  color: var(--text-color-one);
+}
+
+.buss-audience div > div > div:nth-child(2) hr {
+  opacity: 0.1;
+  border: 1px solid var(--border-color-two);
+}
+
+.buss-readers-stats {
+  margin-top: 6.25rem;
+}
+.buss-readers-stats div h2 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 140%;
+  color: var(--text-color-one);
+}
+.buss-readers-stats{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
