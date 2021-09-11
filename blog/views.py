@@ -4,16 +4,9 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from django.contrib.gis.geoip2 import GeoIP2
+
+from .forms import PRForm
 from .models import *
-
-
-def get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
 
 
 class IndexView(generic.ListView):
@@ -23,17 +16,6 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         """Return the last five published questions."""
         return Post.objects.order_by('post_date')[:10]
-
-
-class IPTestView(generic.ListView):
-    template_name = 'blog/iptest.html'
-    context_object_name = 'country'
-
-    def get_queryset(self):
-        ip = get_client_ip(self.request)
-        g = GeoIP2()
-        response = g.country('119.160.103.84')
-        return response
 
 
 class DetailView(generic.ListView):
@@ -53,8 +35,13 @@ def listing(request):
 def home_page(request):
     news_list = Post.objects.filter(category=1).order_by('post_date')[:3]
     lifestyle_list = Post.objects.filter(category=2)
-    context = {'news_list': news_list, 'lifestyle': lifestyle_list}
+    external_resources = NewsSource.objects.order_by('-created_at')
+    context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
     return render(request, 'blog/home.html', context)
+
+
+def press_form_view(request):
+    return render(request, 'blog/pressform.html', {'form': PRForm()})
 
 
 def about_us_page(request):

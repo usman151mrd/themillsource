@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+from django.contrib import staticfiles
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 import os
@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
+    'django_quill',
 ]
 
 MIDDLEWARE = [
@@ -87,12 +88,20 @@ WSGI_APPLICATION = 'themisource.wsgi.application'
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
+        # 'default': {
+        #     'ENGINE': 'django.db.backends.postgresql',
+        #     'NAME': 'themisource',
+        #     'USER': 'themisource',
+        #     'PASSWORD': 'huruhujhyob1z8v3',
+        #     'HOST': 'app-d4dfbce5-3dc3-4fcc-bad7-0102ca3f0a6a-do-user-8599880-0.b.db.ondigitalocean.com',
+        #     'PORT': '25060',
+        # },
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'themisource',
-            'USER': 'themisource',
-            'PASSWORD': 'huruhujhyob1z8v3',
-            'HOST': 'app-d4dfbce5-3dc3-4fcc-bad7-0102ca3f0a6a-do-user-8599880-0.b.db.ondigitalocean.com',
+            'NAME':   'tms', # 'themisource',
+            'USER': 'tms',
+            'PASSWORD': 'oBINEZjwEdiRtoKj',
+            'HOST': 'app-9173c0ea-e32d-46c2-9a1e-11551afb6053-do-user-8599880-0.b.db.ondigitalocean.com',
             'PORT': '25060',
         },
         "sqlite": {
@@ -163,6 +172,7 @@ USE_TZ = True
 # )
 PROJECT_DIR = os.path.dirname(__file__)
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/blog/'
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
