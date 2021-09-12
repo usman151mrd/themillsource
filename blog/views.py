@@ -1,11 +1,7 @@
-from django.core.paginator import Paginator
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
+from django.http import HttpResponse
+from django.shortcuts import render
 from django.views import generic
-from django.contrib.gis.geoip2 import GeoIP2
-
-from .forms import PRForm
+from .location import city
 from .models import *
 
 
@@ -18,30 +14,29 @@ class IndexView(generic.ListView):
         return Post.objects.order_by('post_date')[:10]
 
 
-class DetailView(generic.ListView):
-    model = Post
-    template_name = 'blog/detail.html'
-
-
-def listing(request):
-    contact_list = Post.objects.all()
-    paginator = Paginator(contact_list, 25)  # Show 25 contacts per page.
-
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    return render(request, 'list.html', {'page_obj': page_obj})
+def detail_page(request, pk, **kwargs):
+    try:
+        post = Post.objects.get(pk=pk)
+        seen = post.seen
+        seen += 1
+        Post.objects.filter(pk=pk).update(seen=seen)
+        context = {'post': post}
+        return render(request, 'blog/detail.html', context)
+    except Exception as e:
+        return HttpResponse(f"{e}")
 
 
 def home_page(request):
-    news_list = Post.objects.filter(category=1).order_by('post_date')[:3]
-    lifestyle_list = Post.objects.filter(category=2)
-    external_resources = NewsSource.objects.order_by('-created_at')
+    news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now).order_by('-post_date')[:3]
+    _city = city(request)
+    lifestyle_list = []
+    if Post.objects.filter(city=_city, category=2).count() > 0:
+        lifestyle_list = Post.objects.filter(category=2, city=_city).order_by('-created_at')[:3]
+    else:
+        lifestyle_list = Post.objects.filter(category=2).order_by('-created_at')[:3]
+    external_resources = NewsSource.objects.order_by('-created_at')[:3]
     context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
     return render(request, 'blog/home.html', context)
-
-
-def press_form_view(request):
-    return render(request, 'blog/pressform.html', {'form': PRForm()})
 
 
 def about_us_page(request):

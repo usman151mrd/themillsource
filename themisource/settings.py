@@ -29,8 +29,6 @@ DEVELOPMENT_MODE = True
 # SECRET_KEY = '*8%i$@w*dol*1+pzl#wr1c)l1d&d6oamk6w(t2*g3-&jxyibu8'
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.getenv("DEBUG", "False") == "True"
 DEBUG = True
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS",
@@ -90,11 +88,11 @@ if DEVELOPMENT_MODE is True:
     DATABASES = {
         # 'default': {
         #     'ENGINE': 'django.db.backends.postgresql',
-        #     'NAME': 'themisource',
-        #     'USER': 'themisource',
-        #     'PASSWORD': 'huruhujhyob1z8v3',
-        #     'HOST': 'app-d4dfbce5-3dc3-4fcc-bad7-0102ca3f0a6a-do-user-8599880-0.b.db.ondigitalocean.com',
-        #     'PORT': '25060',
+        #     'NAME': 'tms',
+        #     'USER': 'usman',
+        #     'PASSWORD': 'Fa@12345',
+        #     'HOST': '127.0.0.1',
+        #     'PORT': '5432',
         # },
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
@@ -116,16 +114,6 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
         "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
     }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'themisource',
-#         'USER': 'usman',
-#         'PASSWORD': 'Fa@12345',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# }
 
 
 # Password validation
@@ -164,15 +152,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-# # STATIC_ROOT = "/workspace/static"
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 PROJECT_DIR = os.path.dirname(__file__)
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/blog/'
+MEDIA_URL = '/media/'
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
@@ -183,5 +165,4 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-# Gio IP path
 GEOIP_PATH = os.path.join(BASE_DIR, "GeoLite2")
