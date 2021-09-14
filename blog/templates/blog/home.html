@@ -4,7 +4,7 @@
 {% block content %}
 <main>
     <section class="banner">
-        <h1>Good morning</h1>
+        <h1 id="greeting">Good morning</h1>
         <div class="subscription">
             <div class="news-letter">
                 <strong>SUBSCRIBE TO THE TMS NEWSLETTER</strong>
@@ -288,3 +288,16 @@
     </section>
 </main>
 {% endblock %}
+
+{% block footer %}
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
+{% endblock footer %}

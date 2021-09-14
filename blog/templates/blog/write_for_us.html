@@ -1,0 +1,63 @@
+{% extends 'blog/layout/base.html' %}
+{% load static%}
+<!-- main start -->
+<!-- {% load static %} -->
+{% block content %}
+<div class="wfu-header">
+                <section class="about-title">
+                    <div>
+                        <img src="{% static 'icons/share.svg' %} " alt="share">
+                    </div>
+                    <hr>
+                    <h2>Send us your writing</h2>
+                </section>
+                <section class="wfu-form">
+                    <div class="wfu-form-grid">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="email" id="email" placeholder="Type here">
+                        </div>
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input type="text" name="email" id="email" placeholder="Type here">
+                        </div>
+                    </div>
+                    <div class="wfu-control">
+                        <label for="email">Press release image</label>                        
+                        <button class="wfu-btn wfu-upload-btn" id="file-btn">
+                            <img src="{% static 'icons/upload_img.svg' %}" alt="">
+                            <span>Upload Image</span>
+                        </button>
+                        <input type="file" name="pr-image" id="pr-image" class="wfu-file-browser">                        
+                    </div>
+                    <div class="wfu-control">
+                        <label for="email">Press release heading</label>
+                        <input type="text" name="pr-heading" id="pr-heading" placeholder="Type here">
+                    </div>
+                    <div class="wfu-control">
+                        <label for="email">Press release description</label>
+                        <textarea name="description" id="pr-desc" placeholder="Type here"></textarea>
+                    </div>
+                    <div class="wfu-control-btn">
+                        <span>By submitting this form, you agree to our site's terms and conditions and privacy
+                            policy</span>
+                        <button class="wfu-btn">
+                            Submit
+                        </button>
+                    </div>
+                </section>
+            </div>
+{% endblock %}
+
+{% block footer %}
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
+{% endblock footer %}

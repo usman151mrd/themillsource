@@ -1,120 +1,76 @@
+{% extends 'blog/layout/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style_dark.css' %}">
-    <title>About Us Dark</title>
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <div class="inner">
-                <div class="left-content">
-                    <div class="menu-button">
-                        <img src="{% static 'icons/Menu.svg' %}" alt="menu">
-                    </div>
-
-                    <div class="view">
-                        <img src="{% static 'icons/views.svg' %}" alt="views">
-                        <div class="overlay-text">25K</div>
-                    </div>
-
-                </div>
-                <div class="center-content">
-                    <h1 class="title">TMS</h1>
-                </div>
-
-                <div class="right-content">
-
-                    <div class="theme-change-button">
-                        <img src="{% static 'icons/theme-selector.svg' %}" alt="">
-                    </div>
-                    <div class="current-date">
-                        Monday, April 12, 2021
-                        <hr>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section class="about-header">
-                <section class="about-title">
-                    <div>
-                        <img src="{% static 'icons/share.svg' %}" alt="share">
-                    </div>
-                    <hr>
-                    <h2>About Us</h2>
-                </section>
-                <section class="about-header-nav">
-                    <div>
-                        <p>Our mission </p>
-                        <p>What drives our news rooms</p>
-                    </div>
-                    <hr>
-                    <div>
-                        <p>Our advertising partners</p>
-                        <p>How we make money</p>
-                    </div>
-                </section>
-            </section>
-            <section class="about-mission">
-                <h2>Our Mission</h2>
-                <hr>
-                <div class="mission-detail">
-                    <ul>
-                        <li>
-                            What we do is pretty simple; we explain the biggest stories to you in a way that you can
-                            actually relate to and therefore properly understand.
-                        </li>
-                        <li>
-                            We strip past the noise, fluff, polarization and BS to try show you that understanding
-                            what’s going on in the world isn’t as difficult as it may appear.
-                        </li>
-                    </ul>
-                    <span>
-                        If you feel as if we haven’t lived up to this, let us know here.
-                    </span>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <section class="banner article-banner">
-                <div class="subscription">
-                    <div class="news-letter">
-                        <h4>SUBSCRIBE TO THE TMS NEWSLETTER</h4>
-                        <div class="signup-form">
-                            <img src="{% static 'icons/email-icon.svg' %}" alt="email">
-                            <input type="text" placeholder="Email">
-                            <button type="submit">Sign up</button>
-                        </div>
-                        <p>By providing your email, you agree to our Privacy Policy</p>
-                    </div>
-                    <div class="share">
-                        <h2>Share this page using the link down below</h2>
-                        <button class="copy-btn">
-                            <img src="{% static 'icons/copy-link.svg' %}" alt="copy link">
-                            <span>Copy link</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section class="social">
-                <img src="{% static 'icons/twitter.svg' %}" alt="twitter">
-                <img src="{% static 'icons/linkedin.svg' %}" alt="linked in">
-                <img src="{% static 'icons/facebook.svg' %}" alt="Facebook">
-                <img src="{% static 'icons/bookmark.svg' %}" alt="bookmark">
-                <img src="{% static 'icons/more.svg' %}" alt="more">
-            </section>
-            <section class="copy-right">
-                The Millennial Source Ltd. 2021
-            </section>
-        </footer>
+{% block content %}
+<section class="about-header">
+    <section class="about-title">
+        <div>
+            <img src="{% static 'icons/share.svg' %}" alt="share">
+        </div>
+        <hr>
+        <h2>About Us</h2>
+    </section>
+    <section class="about-header-nav">
+        <div>
+            <p class="active-nav">Our mission </p>
+            <p>What drives our news rooms</p>
+        </div>
+        <hr>
+        <div>
+            <p>Our advertising partners</p>
+            <p>How we make money</p>
+        </div>
+    </section>
+</section>
+<section class="about-mission">
+    <h2>Our Mission</h2>
+    <hr>
+    <div class="mission-detail">
+        <ul>
+            <li>
+                What we do is pretty simple; we explain the biggest stories to you in a way that you can
+                actually relate to and therefore properly understand.
+            </li>
+            <li>
+                We strip past the noise, fluff, polarization and BS to try show you that understanding
+                what’s going on in the world isn’t as difficult as it may appear.
+            </li>
+        </ul>
+        <span>
+            If you feel as if we haven’t lived up to this, let us know here.
+        </span>
     </div>
-</body>
+</section>
+{% endblock content %}
+{% block footer %}
+<section class="banner article-banner">
+    <div class="subscription">
+        <div class="news-letter">
+            <h4>SUBSCRIBE TO THE TMS NEWSLETTER</h4>
+            <div class="signup-form">
+                <img src="{% static 'icons/email_dark.svg' %}" alt="email">
+                <input type="text" placeholder="Email">
+                <button type="submit">Sign up</button>
+            </div>
+            <p>By providing your email, you agree to our Privacy Policy</p>
+        </div>
+        <div class="share">
+            <h2>Share this page using the link down below</h2>
+            <button class="copy-btn">
+                <img src="{% static 'icons/copy-link.svg' %}" alt="copy link">
+                <span>Copy link</span>
+            </button>
+        </div>
+    </div>
+</section>
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
 
-</html>
+{% endblock footer %}

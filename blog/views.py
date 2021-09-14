@@ -27,17 +27,23 @@ def detail_page(request, pk, **kwargs):
 
 
 def home_page(request):
-    news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now).order_by('-post_date')[:3]
-    _city = city(request)
-    lifestyle_list = []
-    if Post.objects.filter(city=_city, category=2).count() > 0:
-        lifestyle_list = Post.objects.filter(category=2, city=_city).order_by('-created_at')[:3]
-    else:
-        lifestyle_list = Post.objects.filter(category=2).order_by('-created_at')[:3]
-    external_resources = NewsSource.objects.order_by('-created_at')[:3]
-    context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
-    return render(request, 'blog/home.html', context)
+    # news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now).order_by('-post_date')[:3]
+    # _city = city(request)
+    # lifestyle_list = []
+    # if Post.objects.filter(city=_city, category=2).count() > 0:
+    #     lifestyle_list = Post.objects.filter(category=2, city=_city).order_by('-created_at')[:3]
+    # else:
+    #     lifestyle_list = Post.objects.filter(category=2).order_by('-created_at')[:3]
+    # external_resources = NewsSource.objects.order_by('-created_at')[:3]
+    # context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
+    return render(request, 'blog/home.html')
 
 
 def about_us_page(request):
     return render(request, 'blog/about_us.html')
+
+def write_for_us_page(request):
+    return render(request, 'blog/write_for_us.html')
+
+def send_us_your_pr_page(request):
+    return render(request, 'blog/send_us_your_pr.html')    

@@ -16,10 +16,10 @@
     <div class="menu-wrapper" id="main-menu">
         <nav>
             <div class="menu-header">
-                <img src="icons/close.svg" alt="close" class="close-icon" id="close-button">
+                <img src="{% static 'icons/close.svg' %}" alt="close" class="close-icon" id="close-button">
                 <div class="menu-search">
                     <div>
-                        <img src="icons/search.svg" alt="search">
+                        <img src="{% static 'icons/search.svg' %}" alt="search">
                         <input type="text" name="search" placeholder="Search">
                         <hr>
                     </div>
@@ -29,13 +29,13 @@
                 <div class="menu-discover">
                     <h1 class="menu-title">Discover</h1>
                     <div class="menu-body">
-                        <a href="#">About Us</a>
+                        <a href="{% url 'blog:about-us' %}">About Us</a>
                         <a href="#">Careers</a>
                         <a href="#">Contact</a>
                         <a href="#">Advertise</a>
                         <a href="#">Archives</a>
-                        <a href="#">Write for us</a>
-                        <a href="#">Send us your press release</a>
+                        <a href="{% url 'blog:write-for-us' %}">Write for us</a>
+                        <a href="{% url 'blog:send-us-your-pr' %}">Send us your press release</a>
                         <a href="#">Privacy policy</a>
                         <a href="#">Terms of service</a>
                     </div>
@@ -64,10 +64,10 @@
                 <div class="menu-social">
                     <h1 class="menu-title">Follow us</h1>
                     <div>
-                        <img src="icons/twitter_m.svg" alt="twitter">
-                        <img src="icons/linkedin_m.svg" alt="linkedin">
-                        <img src="icons/facebook_m.svg" alt="facebook">
-                        <img src="icons/insta_menu.svg" alt="insta">
+                        <img src="{% static 'icons/twitter_m.svg' %}" alt="twitter">
+                        <img src="{% static 'icons/linkedin_m.svg' %}" alt="linkedin">
+                        <img src="{% static 'icons/facebook_m.svg' %}" alt="facebook">
+                        <img src="{% static 'icons/insta_menu.svg' %}" alt="insta">
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
             <div class="inner">
                 <div class="left-content">
                     <div class="menu-button">
-                        <img src="{% static 'icons/Menu_dark.svg' %}" alt="menu">
+                        <img src="{% static 'icons/Menu_dark.svg' %}" alt="menu" id="show-button">
                     </div>
 
                     <div class="view">
@@ -89,7 +89,7 @@
 
                 </div>
                 <div class="center-content">
-                    <h1 class="title">TMS</h1>
+                    <a href="{% url 'blog:home' %}"><h1 class="title">TMS</h1></a>
                 </div>
 
                 <div class="right-content">
@@ -98,7 +98,7 @@
                         <img src="{% static 'icons/light.svg' %}" alt="">
                     </div>
                     <div class="current-date">
-                        Monday, April 12, 2021
+                        {% now " l, F d, Y" %}                        
                         <hr>
                     </div>
                 </div>
@@ -108,19 +108,14 @@
 
         {% endblock %}
         <footer>
-            <section class="social">
-                <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
-                <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
-                <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
-                <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
-                <img src="{% static 'icons/more_dark.svg' %}" alt="more">
-            </section>
-            <section class="copy-right">
-                The Millennial Source Ltd. 2021
-            </section>
+        {% block footer %}
+        
+        {% endblock footer %}        
         </footer>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="{% static 'js/GreetingPlugin.js' %} "></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 
 </html>
