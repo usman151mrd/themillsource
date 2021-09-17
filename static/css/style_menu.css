@@ -19,8 +19,8 @@
   left: 0;
   z-index: 1000;
   display: none;
-  height: 40.625rem;
-  overflow-y: auto;
+  /* height: 40.625rem;
+  overflow-y: auto; */
 }
 .show-menu {
   display: block;

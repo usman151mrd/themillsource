@@ -301,6 +301,7 @@ p {
 }
 .row:nth-child(odd) {
   background-color: var(--background-color-four);
+  opacity: 0.4;
 }
 .row:nth-child(even) {
   background-color: var(--background-color-one);
@@ -763,7 +764,7 @@ footer {
   text-align: right;
 }
 .about-title hr {
-  border: 0.0625rem solid var(--border-color-two);
+  border: 0.0625rem solid var(--border-color-one);
 }
 .about-title h2 {
   margin: 0.9375rem 0 0 0;

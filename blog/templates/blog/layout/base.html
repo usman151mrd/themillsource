@@ -40,7 +40,7 @@
                         <a href="#">Terms of service</a>
                     </div>
                 </div>
-                <div class="menu-hot-topics">
+                {% comment %} <div class="menu-hot-topics">
                     <h1 class="menu-title">Hot Topics</h1>
                     <div class="menu-body">
                         <a href="#">Crypto</a>
@@ -60,7 +60,7 @@
                         <a href="#">Space race</a>
                         <a href="#">Banking giants</a>
                     </div>
-                </div>
+                </div> {% endcomment %}
                 <div class="menu-social">
                     <h1 class="menu-title">Follow us</h1>
                     <div>
@@ -89,7 +89,10 @@
 
                 </div>
                 <div class="center-content">
-                    <a href="{% url 'blog:home' %}"><h1 class="title">TMS</h1></a>
+                    <a href="{% url 'blog:home' %}">
+                        {% comment %} <h1 class="title">TMS</h1> {% endcomment %}
+                        <img src="{% static 'images/logo_dark.png' %}" alt="logo" height="36">
+                    </a>
                 </div>
 
                 <div class="right-content">
