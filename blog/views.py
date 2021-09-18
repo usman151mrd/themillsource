@@ -42,8 +42,14 @@ def home_page(request):
 def about_us_page(request):
     return render(request, 'blog/about_us.html')
 
+
 def write_for_us_page(request):
     return render(request, 'blog/write_for_us.html')
 
+
 def send_us_your_pr_page(request):
-    return render(request, 'blog/send_us_your_pr.html')    
+    return render(request, 'blog/send_us_your_pr.html')
+
+
+def advertise_page(request):
+    return render(request, 'blog/advertise.html')
