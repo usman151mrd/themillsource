@@ -407,7 +407,9 @@ p {
   font-style: normal;
   font-size: 1.875rem;
 }
-
+.info-list{
+  margin-top: 4.375rem;
+}
 .info {
   /* display: grid;   */
   /* grid-template-columns: 70% 30%; */
