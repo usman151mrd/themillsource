@@ -14,6 +14,7 @@
   --text-color-one: #ffffff;
   --text-color-two: #000000;
   --text-color-five: #38b6ff;
+  --text-color-six: #a0dcff;
 }
 
 /* body  */
@@ -97,7 +98,12 @@ main {
 .about-mission,
 .wfu-form,
 .wfu-header,
-.wrapper{
+.wrapper,
+.buss-header,
+.buss-enq-form-link,
+.buss-cs,
+.buss-pd,
+.buss-audience{
   max-width: 70.625rem;
   margin: 0 auto;
 }
@@ -759,10 +765,11 @@ footer {
   border-radius: 3px;
 }
 
-.about-header {
-  margin-top: 2.5rem;
+.about-header,
+.buss-header {
+  margin-top: 2.5rem;  
 }
-.about-title > div {
+.about-title > div , .buss-header > div:first-child > div{
   text-align: right;
 }
 .about-title hr {
@@ -1083,4 +1090,217 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+/* business and case study page */
+.buss-header *,
+.buss-audience *,
+.buss-pd *,
+.buss-cs * {
+  color: var(--text-color-two);
+}
+.buss-offer h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.75rem;
+  line-height: 4.1875rem;
+  text-transform: uppercase;
+  color: var(--text-color-two);
+  margin: 0.9375rem 0 2.5rem 0;
+}
+.buss-offer ul li {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+
+  color: var(--text-color-two);
+}
+.buss-offer div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buss-audience h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 3.0625rem;
+  text-transform: uppercase;
+  color: var(--text-color-two);
+}
+.buss-audience .reader-stats > div {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+  /* background-color: red; */
+}
+.buss-audience div > div > div:first-child {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.8125rem;
+  line-height: 4.1875rem;
+  text-transform: uppercase;
+  color: var(--text-color-six);
+}
+.buss-audience div > div > div:nth-child(2) {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 2.125rem;
+  text-align: right;
+  color: var(--text-color-two);
+}
+
+.buss-audience div > div > div:nth-child(2) hr {
+  opacity: 0.1;
+  border: 1px solid var(--border-color-one);
+}
+
+.buss-readers-stats {
+  margin: 6.25rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.buss-lists h2 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3125rem;
+  line-height: 140%;
+  color: var(--text-color-two);
+}
+.buss-lists ul{
+  display: inline-block;
+}
+.buss-lists ul li {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9375rem;
+  line-height: 160%;  
+  font-feature-settings: "liga" off;
+  color:var(--text-color-two);;
+}
+.buss-lists {
+  padding-left: 155px;
+  padding-top: 125px;
+  padding-bottom: 80px;
+  /* width: 615px;
+  height: 30.75rem; */
+  border-radius: 600px ;
+  border: 1px solid green;
+  /* padding: 150px 90px; */
+  /* text-align: center; */
+}
+.buss-lists:last-child{
+  margin-left: -80px;
+  background-color: var(--background-color-eight);
+  opacity: 0.5;
+  border: 3px solid var(--border-color-four);
+}
+.bus-pd > h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 140%;
+  /* identical to box height, or 42px */
+
+  text-transform: uppercase;
+}
+.buss-pd > div {
+  margin-top: 3.125rem;
+}
+
+.buss-pd > div > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.buss-pd > div > div > span {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+}
+.buss-cs {
+  margin-top: 4.375rem;
+}
+.buss-cs h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 140%;
+  /* padding-bottom: 5px; */
+  margin-bottom: 0.1875rem;
+  /* identical to box height, or 42px */
+}
+.buss-cs img {
+  margin-top: 1.875rem;
+}
+.buss-cs > div {
+  max-width: 42rem;
+  margin: 0 auto;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 160%;
+
+  color: var(--text-color-two);
+}
+.case-study-detail > i {
+  font-family: Proxima Nova;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+.btn-horzontal {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-horzontal button {
+  padding: 11px 91px;
+  border-radius: 0.1875rem;
+  margin: 50px 0;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: capitalize;
+}
+.btn-horzontal button:first-child {
+  color: var(--text-color-one);
+  background-color: var(--background-color-two);
+}
+.btn-horzontal button:last-child {
+  color: var(--text-color-two);
+  border: 1px solid var(--border-color-one);
+  background-color: var(--background-color-one);
+}
+
+.buss-enq-form-link {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 160%;
+  padding: 1.875rem 7.1875rem;
+  background-color: var(--background-color-three);
+  color: var(--text-color-two);
+  border-bottom-left-radius: 1.875rem;
+  border-top-right-radius: 1.875rem;
+  margin-top: 2.5rem;
 }
