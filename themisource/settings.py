@@ -96,10 +96,10 @@ if DEVELOPMENT_MODE is True:
         # },
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME':   'tms', # 'themisource',
+            'NAME':   'tms',  # 'themisource',
             'USER': 'tms',
-            'PASSWORD': 'oBINEZjwEdiRtoKj',
-            'HOST': 'app-9173c0ea-e32d-46c2-9a1e-11551afb6053-do-user-8599880-0.b.db.ondigitalocean.com',
+            'PASSWORD': '0cxqVdnP2j7LLxv2',
+            'HOST': 'app-c63a9ccd-ad0e-4248-b14f-a5a07e6c4882-do-user-8599880-0.b.db.ondigitalocean.com',
             'PORT': '25060',
         },
         "sqlite": {
