@@ -1,0 +1,106 @@
+/* @import url("./fonts.css");
+:root {
+  --background-color-one: #ffffff;
+  --background-color-two: #222222;
+  --background-color-three: #eeefef;
+  --background-color-four: #acebf4;
+  --background-color-five: #eeefef;
+  --border-color-one: #000000;
+  --border-color-two: #ffffff;
+  --border-color-three: #38b6ff;
+  --text-color-one: #ffffff;
+  --text-color-two: #000000;
+} */
+
+.menu-wrapper {
+  max-width: 30.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  /* height: 40.625rem;
+  overflow-y: auto; */
+}
+.show-menu {
+  display: block;
+}
+.menu-header {
+  background-color: #ffffff;
+  padding: 2.5rem;
+}
+.close-icon {
+  padding: 1.0625rem 1.25rem 1.0625rem 0;
+  margin-bottom: 15px;
+}
+#close-button:hover {
+  cursor: pointer;
+}
+#show-button:hover {
+  cursor: pointer;
+}
+.menu-search input[type="text"] {
+  border: none;
+  width: 85%;
+  font-family: Proxima Nova;
+  font-size: 18px;
+  padding: 6px 15px;
+}
+.menu-search input[type="text"]:focus {
+  outline: none;
+}
+.menu-search hr {
+  border: 0.0625rem solid #000000;
+}
+.menu-category {
+  background-color: #eeefef;
+  padding: 2.5rem;
+}
+.menu-title {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+  text-transform: uppercase;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.menu-body {
+  background-color: #ffffff;
+  padding: 1.875rem 2.875rem;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  /* height: 200px; */
+  display: grid;
+  /* row-gap: 10px; */
+  column-gap: 0.625rem;
+  /* grid-template-rows: 1fr; */
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+}
+.menu-more .menu-body {
+  row-gap: 0.8125rem;
+}
+.menu-body a {
+  display: block;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  /* margin-bottom: 20px; */
+  text-decoration: none;
+  color: #000000;
+}
+.menu-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+.menu-social h1 {
+  margin: 0;
+}

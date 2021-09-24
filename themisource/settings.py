@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
-    'django_quill',
+    'django_summernote'
 ]
 
 MIDDLEWARE = [
@@ -166,3 +166,6 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 GEOIP_PATH = os.path.join(BASE_DIR, "GeoLite2")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views import generic
 from .location import city
 from .models import *
+from django.utils import timezone
 
 
 class IndexView(generic.ListView):
@@ -27,16 +28,18 @@ def detail_page(request, pk, **kwargs):
 
 
 def home_page(request):
-    # news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now).order_by('-post_date')[:3]
-    # _city = city(request)
-    # lifestyle_list = []
-    # if Post.objects.filter(city=_city, category=2).count() > 0:
-    #     lifestyle_list = Post.objects.filter(category=2, city=_city).order_by('-created_at')[:3]
-    # else:
-    #     lifestyle_list = Post.objects.filter(category=2).order_by('-created_at')[:3]
-    # external_resources = NewsSource.objects.order_by('-created_at')[:3]
-    # context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
-    return render(request, 'blog/home.html')
+    news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now(), post_status='published')[:3]
+    _city = city(request)
+    lifestyle_list = []
+    if Post.objects.filter(city=_city, category=2).count() > 0:
+        lifestyle_list = Post.objects.filter(category=2, city=_city, schedule_time__lt=timezone.now(),
+                                             post_status='published')[:3]
+    else:
+        lifestyle_list = Post.objects.filter(category=2, schedule_time__lt=timezone.now(), post_status='published')[:3]
+
+    external_resources = NewsSource.objects.order_by('-created_at')[:3]
+    context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
+    return render(request, 'blog/home.html', context)
 
 
 def about_us_page(request):
