@@ -4,7 +4,6 @@ from django.core import validators
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-from tinymce.models import HTMLField
 
 
 def post_upload_to(instance, filename):
