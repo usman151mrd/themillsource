@@ -48,7 +48,7 @@ class Migration(migrations.Migration):
                 ('company_name', models.CharField(max_length=100)),
                 ('industry', models.CharField(max_length=100)),
                 ('email', models.EmailField(max_length=100, validators=[django.core.validators.EmailValidator])),
-                ('logo', models.ImageField(upload_to='')),
+                ('write4us', models.ImageField(upload_to='')),
                 ('image', models.ImageField(upload_to='')),
                 ('address', models.CharField(max_length=250)),
                 ('phone', models.CharField(max_length=25)),

@@ -1,0 +1,37 @@
+{% extends 'blog/layout/base.html' %}
+{% load static%}
+<!-- main start -->
+<!-- {% load static %} -->
+{% block content %}
+<div class="wfu-header">
+    <section class="about-title">
+        <div>
+            <img src="{% static 'icons/share.svg' %} " alt="share">
+        </div>
+        <hr>
+        <h2>Send us your writing</h2>
+    </section>
+    <section class="wfu-form">
+
+        <form enctype="multipart/form-data" action="{% url 'blog:temp' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+
+  </section>
+            </div>
+{% endblock %}
+
+{% block footer %}
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
+{% endblock %}

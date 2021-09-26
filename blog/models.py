@@ -10,16 +10,20 @@ def post_upload_to(instance, filename):
     return 'blog/post/{filename}'.format(filename=filename)
 
 
+def logo_upload_to(instance, filename):
+    return 'blog/post/{filename}'.format(filename=filename)
+
+
 def ns_upload_to(instance, filename):
     return 'blog/source/{filename}'.format(filename=filename)
 
 
-def logo_upload_to(instance, filename):
-    return 'blog/press/{filename}'.format(filename=filename)
+def wfu_upload_to(instance, filename):
+    return 'blog/write4us/{filename}'.format(filename=filename)
 
 
 def press_upload_to(instance, filename):
-    return 'blog/logo/{filename}'.format(filename=filename)
+    return 'blog/press/{filename}'.format(filename=filename)
 
 
 class Category(models.Model):
@@ -65,25 +69,30 @@ class Post(models.Model):
         return self.schedule_time < timezone.now() and self.post_status == 'published'
 
 
-class PressReleaseForm(models.Model):
+class PressRelease(models.Model):
     company_name = models.CharField(max_length=100)
-    industry = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, validators=[validators.EmailValidator])
-    logo = models.ImageField(_("logo"), upload_to=logo_upload_to)
-    image = models.ImageField(_("Image"), upload_to=press_upload_to)
-    address = models.CharField(max_length=250)
-    phone = models.CharField(max_length=25)
+    image = models.ImageField(_("Image"), upload_to=press_upload_to, default='blog/press/default.jpg')
+    heading = models.CharField(max_length=500)
     description = models.TextField()
-    discount_description = models.TextField()
-    release_date = models.DateField()
-    sample = models.FileField()
-    facebook = models.URLField()
-    instagram = models.URLField()
-    twitter = models.URLField()
-    linkedin = models.URLField()
+    created_at = models.DateTimeField(default=timezone.now, null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
-        return self.company_name
+        return self.heading
+
+
+class WriteForUs(models.Model):
+    company_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100, validators=[validators.EmailValidator])
+    image = models.ImageField(_("Image"), upload_to=wfu_upload_to, default='blog/write4us/default.jpg')
+    heading = models.CharField(max_length=500)
+    description = models.TextField()
+    created_at = models.DateTimeField(default=timezone.now, null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+    def __str__(self):
+        return self.heading
 
 
 class NewsSource(models.Model):

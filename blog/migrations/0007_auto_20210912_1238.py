@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='pressreleaseform',
-            name='logo',
-            field=models.ImageField(upload_to=blog.models.logo_upload_to, verbose_name='logo'),
+            name='write4us',
+            field=models.ImageField(upload_to=blog.models.logo_upload_to, verbose_name='write4us'),
         ),
     ]

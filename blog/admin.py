@@ -32,6 +32,7 @@ class NewsSourceAdmin(SummernoteModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category)
-admin.site.register(PressReleaseForm)
+admin.site.register(PressRelease)
+admin.site.register(WriteForUs)
 
 admin.site.register(NewsSource, NewsSourceAdmin)

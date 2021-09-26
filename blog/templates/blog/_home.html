@@ -26,88 +26,104 @@
     </section>
     <section class="twenty-four-news">
         <h1>IN THE LAST 24 HOURS...</h1>
-    <div class="new-container">
-        {% for news in news_list %}
-            {% if forloop.counter  == 1 %}
-                <section class="news-with-image">
-                <img src="{{ news.feature_image_url.url }}"
+        <hr>
+        <div class="new-container">
+            <section class="news-with-image">
+                <img src="{% static 'images/america-inequality-coronavirus-1587146011346-facebookJumbo 3.png' %}"
                     alt="covid">
-            {% else %}
-                <section class="news">
-            {% endif %}
-            <a href="{% url 'blog:detail' news.id %}">
-            <h1>{{ news.post_title }}</h1>
-            </a>
-            <p>
-            {% with news.meta_description as content%}
-                {{ content |slice:100 }}
-
-            {% endwith %}
-            </p>
-             <div class="news-stats">
+                <h1>Arkansas becomes first U.S. state to ban treatments for transgender youth</h1>
+                <p>Overriding a veto by Governor Asa Hutchinson, Arkansas has become the first US state to ban
+                    certain types of treatment for transgender youth.</p>
+                {% comment %} <div class="news-stats">
                     <img src="{% static 'icons/likes_dark.svg' %}" alt="">
-                    <span>{{ news.seen }}</span>
-                </div>
-        </section>
-            {% if forloop.counter == 1 %}
-                <section class="news-list">
-            {% endif %}
-        {% endfor %}
-        </section>
-
+                    <span>10,543</span>
+                </div> {% endcomment %}
+            </section>
+            <section class="news-list">
+                <section class="news">
+                    <h1>Eating our lunch: Biden points to China in development push</h1>
+                    <p>US President Joe Biden is pointing to a booming, ambitious China in his push for
+                        trillions of dollars in development spending.</p>
+                    {% comment %} <div class="news-stats">
+                        <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                        <span>10,543</span>
+                    </div> {% endcomment %}
+                </section>
+                <section class="news">
+                    <h1>World Bank chief expects G20 to extend debt payment freeze through end-2021</h1>
+                    <p>The World Bank president expects China, the US and other G20 major economies to extend a
+                        freeze in bilateral debt service payments through the end of 2021.</p>
+                    {% comment %} <div class="news-stats">
+                        <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                        <span>10,543</span>
+                    </div> {% endcomment %}
+                </section>
+                <section class="news">
+                    <h1>Eating our lunch: Biden points to China in development push</h1>
+                    <p>US President Joe Biden is pointing to a booming, ambitious China in his push for
+                        trillions of dollars in development spending.</p>
+                    {% comment %} <div class="news-stats">
+                        <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                        <span>10,543</span>
+                    </div> {% endcomment %}
+               </section>
+            </section>
+        </div>
     </section>
     <section class="markets">
-            <div class="markets-wrapper">
-                <div class="inner">
-                    <h1>MARKETS</h1>
-                    <hr>
-                </div>
-                <div class="markets-data">
-                    <div class="row">
-                        <div>
-                            <img src="{% static 'icons/Arrowg.svg' %}" alt="">
-                        </div>
-                        <div>Nasdaq</div>
-                        <div>11,224,334</div>
-                        <div>+32.32%</div>
-                    </div>
-                    <div class="row">
-                        <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
-                        <div>S&P</div>
-                        <div>8,542,356</div>
-                        <div>+10.11%</div>
-                    </div>
-                    <div class="row">
-                        <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
-                        <div>Dow</div>
-                        <div>29,467,423</div>
-                        <div>+5.52%</div>
-                    </div>
-                    <div class="row">
-                        <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
-                        <div>Gold</div>
-                        <div>1,464,245</div>
-                        <div>+24.73%</div>
-                    </div>
-                    <div class="row">
-                        <div><img src="{% static 'icons/Arrowr.svg' %}" alt=""></div>
-                        <div>10-YR</div>
-                        <div>0.835%</div>
-                        <div>-14.32%</div>
-                    </div>
-                    <div class="row">
-                        <div><img src="{% static 'icons/Arrowr.svg' %}" alt=""></div>
-                        <div>OIL</div>
-                        <div>42.17</div>
-                        <div>-6.22%</div>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, cum consectetur amet orci non ut
-                    et. Amet, et sagittis, cras id est adipiscing platea ultricies. Ullamcorper dictumst platea
-                    nullam dignissim non euismod et elementum sed. Quis maecenas venenatis lorem quis faucibus
-                    bibendum luctus vestibulum.</p>
+        <div class="markets-wrapper">
+            <div class="inner">
+                <h1>MARKETS</h1>
+                <hr>
             </div>
+            <div class="markets-data">
+                <div class="row">
+                    <div>
+                        <img src="{% static 'icons/Arrowg.svg' %}" alt="">
+                    </div>
+                    <div>Nasdaq</div>
+                    <div>11,224,334</div>
+                    <div>+32.32%</div>
+                </div>
+                <div class="row">
+                    <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
+                    <div>S&P</div>
+                    <div>8,542,356</div>
+                    <div>+10.11%</div>
+                </div>
+                <div class="row">
+                    <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
+                    <div>Dow</div>
+                    <div>29,467,423</div>
+                    <div>+5.52%</div>
+                </div>
+                <div class="row">
+                    <div><img src="{% static 'icons/Arrowg.svg' %}" alt=""></div>
+                    <div>Gold</div>
+                    <div>1,464,245</div>
+                    <div>+24.73%</div>
+                </div>
+                <div class="row">
+                    <div><img src="{% static 'icons/Arrowr.svg' %}" alt=""></div>
+                    <div>10-YR</div>
+                    <div>0.835%</div>
+                    <div>-14.32%</div>
+                </div>
+                <div class="row">
+                    <div><img src="{% static 'icons/Arrowr.svg' %}" alt=""></div>
+                    <div>OIL</div>
+                    <div>42.17</div>
+                    <div>-6.22%</div>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, cum consectetur amet orci non ut
+                et. Amet, et sagittis, cras id est adipiscing platea ultricies. Ullamcorper dictumst platea
+                nullam dignissim non euismod et elementum sed. Quis maecenas venenatis lorem quis faucibus
+                bibendum luctus vestibulum.</p>
+        </div>
     </section>
+
+    <!-- biggets topic driving our office -->
     <section class="hot-topics">
         <h1>The biggest topics driving our newsroom</h1>
         <div class="topic">
@@ -215,39 +231,60 @@
             </div>
         </div>
     </section>
-        <h1> Life style </h1>
-        {% for news in lifestyle %}
 
-            <a href="{% url 'blog:detail' news.id %}">
-            <h1>{{ news.post_title }}</h1>
-            </a>
-            {% with news.meta_description as content%}
-                {{ content |slice:100 }}
-
-            {% endwith %}
-            <div class="news-stats">
-                    <img src="{% static 'icons/likes_dark.svg' %}" alt="">
-                    <span>{{ news.seen }}</span>
+    <section class="info-list">
+        <h2>A BREAK FROM THE NEWS</h2>
+        <hr>
+        <div class="info">
+            <div class="row1">
+                <div class="info-title">
+                    <span class="title-date">MAY 4, 2021</span>
+                    <h1>The 7 best restaurants in Soho, Hong Kong</h1>
+                    <button>Read More</button>
+                </div>
+                <div class="info-detail">
+                    Take the escalators from Central to Mid-Levels to hit SoHo, one of Hong Kong’s most famous
+                    foodie districts. The best restaurants in Soho, Hong Kong are top-notch, serving cuisine...
+                </div>
+            </div>
+            <div class="info-image">
+                <img src="{% static 'images/image_6.png' %}" alt="">
+            </div>
+        </div>
+        <div class="info">
+            <div class="row1">
+                <div class="info-title">
+                    <span class="title-date">MAY 4, 2021</span>
+                    <h1>A local’s guide to secret spots in Los Angeles</h1>
+                    <button>Read More</button>
+                </div>
+                <div class="info-detail">
+                    You might wonder how there could possibly be any secret spots left in Los Angeles, a city
+                    overrun with bloggers, tourists and social media monsters. La La Land wreaks of...
+                </div>
             </div>
 
-        {% endfor %}
-
-
-
-
-
-
-        <h1>External News </h1>
-        {% for e in news_source_list %}
-            <a href="{{ e.url }}"></a>
-            {{ e.title }}
-            <img src="{{ e.image.url }}">
-            <p>
-                {{ e.description }}
-            </p>
-        {% endfor %}
-
-    </div>
+            <div class="info-image">
+                <img src="{% static 'images/image_7.png' %}" alt="">
+            </div>
+        </div>
+        <div class="info">
+            <div class="row1">
+                <div class="info-title">
+                    <span class="title-date">MAY 4, 2021</span>
+                    <h1>What is the importance of Earth Day?</h1>
+                    <button>Read More</button>
+                </div>
+                <div class="info-detail">
+                    For more than 50 years now, the importance of Earth Day has been globally celebrated ever
+                    since
+                    the first celebration of Earth was held on April 22, 1970. Leading an...
+                </div>
+            </div>
+            <div class="info-image">
+                <img src="{% static 'images/image_8.png' %}" alt="">
+            </div>
+        </div>
     </section>
 </main>
 {% endblock %}
