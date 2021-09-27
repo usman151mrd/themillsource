@@ -585,6 +585,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   max-width: 41.875rem;
+  color: var(--text-color-two);
 }
 .article-detail {
   margin-top: 3.125rem;
@@ -644,15 +645,15 @@ footer {
   margin-bottom: 2.625rem;
   padding: 1.875rem;
   border-top-right-radius: 1.5625rem;
-  border-bottom-left-radius: 1.5625rem;
-  background-color: var(--background-color-two);
+  border-bottom-left-radius: 1.5625rem;  
+  background-color: var(--background-color-three);
 }
 
 .article-rating > div:first-child {
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.875rem;
+  font-size: 1.6875rem;
   line-height: 190%;
 }
 .rating-selection,
@@ -665,7 +666,7 @@ footer {
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 1.0625rem;
   line-height: 160%;
 }
 .rating-actions {
@@ -679,7 +680,7 @@ footer {
   text-transform: capitalize;
   color: var(--text-color-one);
   padding: 0.625rem 4.6875rem;
-  background-color: var(--background-color-one);
+  background-color: var(--background-color-two);
 }
 .icon-button {
   display: flex;
@@ -693,7 +694,7 @@ footer {
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
   line-height: 2.375rem;
 }
 .rating-selection > span:not(:last-child) {

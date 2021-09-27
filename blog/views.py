@@ -23,7 +23,7 @@ def detail_page(request, pk, **kwargs):
         seen += 1
         Post.objects.filter(pk=pk).update(seen=seen)
         context = {'post': post}
-        return render(request, 'blog/detail.html', context)
+        return render(request, 'blog/article.html', context)
     except Exception as e:
         return HttpResponse(f"{e}")
 

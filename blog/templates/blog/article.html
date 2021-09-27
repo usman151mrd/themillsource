@@ -1,0 +1,234 @@
+{% extends 'blog/layout/base.html' %}
+<!-- main start -->
+<!-- {% load static %} -->
+{% block content %}
+<main>
+
+    <section class="article-top-wrapper">
+        <div class="article-reading-info">
+            <span>
+                May 13, 2021
+                <hr>
+            </span>
+            <span>Reading Time: 7 mins read</span>
+        </div>
+        <div class="article-title">
+            <p>Violence continues to escalate between Israelis and Palestinians</p>
+        </div>
+        <div class="article-row">
+            <div class="article-author">
+                <p>by Caleb Moll and Brendan Monroe</p>
+                <p>
+                    Photo Source: Toby Melville, Reuters
+                </p>
+            </div>
+            <div class="social">
+                <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+                <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+                <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+                <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+                <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+            </div>
+        </div>
+    </section>
+    <section class="article-header">
+        {% comment %} <img src="images/article_1.png" alt="article"> {% endcomment %}
+        <img src="{% static 'images/article_1.png' %}" alt="">
+        <p>This is the most violence that the region has seen since the Israeli war on Gaza that lasted for
+            seven weeks in 2014. </p>
+    </section>
+    <section class="article-detail">
+        <p>The Gaza strip, also known as just Gaza, is Palestinian territory controlled and governed by
+            Palestinians. It’s located on a tiny strip of land between Egypt and Israel.</p>
+        {% comment %} <img src="images/article_2.png" alt=""> {% endcomment %}
+        <img src="{% static 'images/article_2.png' %}" alt="">
+        <ul>
+            <li>The territory of Gaza was promised to Palestine by Israel in 1994 after years of disputes over
+                the land
+                that had left many Palestinians without a place to call home.</li>
+            <li>Since 2007, Gaza has been governed by Hamas, a Palestinian Sunni-Islamic nationalist
+                organization.</li>
+            <li>
+                Israel, the United States and the European Union, among others, have labeled Hamas a terrorist
+                organization.
+            </li>
+            <li>Israel claims it’s the rightful owner of much of the land in and around Palestine and has been
+                building
+                settlements within Palestinian territory.</li>
+            <li>
+                These settlements were found to be illegal in 2004 by the International Court of Justice, but
+                Israel
+                still hasn’t removed these settlements.
+            </li>
+            <li>
+                As Israel has continued to expand into Palestinian territory in recent years, tensions between
+                the two
+                nations have escalated.
+            </li>
+        </ul>
+        <h2>What’s happened so far? </h2>
+        <ul>
+            <li>
+                On Monday, Hamas began firing rockets into Israel and Israel responded with airstrikes.
+            </li>
+            <li>
+                According to the Israeli military, since Monday, over 1,000 rockets have been fired from Gaza.
+                Most have been intercepted by Israel’s missile defense system.
+            </li>
+            <li>
+                But what was largely unexpected is how people have responded on the streets of Israeli cities,
+                with Israelis attacking Palestinians and Palestinians attacking Israelis.
+            </li>
+            <li>
+                According to Palestinian health officials, since Monday more than 69 Palestinians, including 17
+                children, have been killed in Gaza and hundreds more have been injured.
+            </li>
+            <li>
+                The United Nations has since warned of the threat of a “full-scale war.”
+            </li>
+        </ul>
+        {% comment %} <img src="images/article_3.png" alt=""> {% endcomment %}
+        <img src="{% static 'images/article_3.png' %}" alt="">
+        <h2>What started this recent escalation </h2>
+        <ul>
+            <li>This is the most violence that the region has seen since the Israeli war on Gaza that lasted for
+                seven weeks in 2014. </li>
+            <li> escalation of violence has taken place during Ramadan, a holy month for Muslims around the
+                world.</li>
+            <li> weekend, Israeli police used stun grenades and rubber bullets on Palestinians at the Al-Aqsa
+                Mosque. </li>
+            <li>Israeli police say that this was in response to rocks being thrown at the Western Wall where
+                thousands of Jews had come together to pray. </li>
+            <li>A spokesperson for the mosque has said that the clashes started after the Israeli police tried
+                to evacuate the area where many Palestinians sleep during Ramadan to let Israelis in. </li>
+        </ul>
+        <h2>How has the US responded to the violence?</h2>
+        <ul>
+            <li>US Secretary of State Anthony Blinken urged both sides to stop the violence during a call with
+                Israeli Prime Minister Benjamin Netanyahu.</li>
+            <li>Blinken emphasized the need “for Israelis and Palestinians to be able to live in safety and
+                security.” </li>
+            <li>The deputy secretary of state for Israel and Palestinian affairs, Hady Amr, is traveling to the
+                region to try to de-escalate tensions.</li>
+            <li>President Joe Biden also spoke to Prime Minister Netanyahu on Wednesday. </li>
+            <li>“My expectation and hope is this will be closing down sooner than later,” Biden said, while
+                expressing his “unwavering support for Israel’s security and for Israel’s legitimate right to
+                defend itself and its people, while protecting civilians.”</li>
+            <li>While Biden didn’t speak about the deaths of Palestinian citizens in Gaza from the Israeli
+                airstrikes, he did say that Israel had “a right to defend itself when you have thousands of
+                rockets flying into your territory.”</li>
+            <li>Martin S. Indyk, a former US ambassador to Israel, said that Biden is being pressured to take
+                more of an active stance.</li>
+            <li>Indyk also says that Biden needs to establish a dialogue with the Palestinians and make an
+                agreement for them possible as well.</li>
+        </ul>
+
+    </section>
+    <section class="article-footer">
+        <!-- <section class="banner">
+                    <div class="subscription">
+                        <div class="news-letter">
+                            <strong>SUBSCRIBE TO THE TMS NEWSLETTER</strong>
+                            <div class="signup-form">
+                                <img src="icons/email-icon.svg" alt="email">
+                                <input type="text" placeholder="Email">
+                                <button type="submit">Sign up</button>
+                            </div>
+                            <p>By providing your email, you agree to our Privacy Policy</p>
+                        </div>
+                    </div>
+                </section> -->
+        <section class="article-rating">
+            <div>Rate this explanation </div>
+            <div>
+                <div class="rating-selection">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+
+                </div>
+                <hr>
+            </div>
+            <div>Sign up to rate this article</div>
+            <div class="rating-actions">
+                <button>Continue with email</button>
+                <button class="icon-button">
+                    {% comment %} <img src="icons/gmail_2020.svg" alt=""> {% endcomment %}
+                    <img src="{% static 'icons/gmail_2020.svg' %}" alt="">
+                    <span>continue with gmail</span>
+                </button>
+            </div>
+        </section>
+    </section>
+    <section class="article-latest-news">
+        <div>
+            <h1>Latest Posts</h1>
+            <hr>
+            <div class="new-container">
+                <section class="news-with-image">
+                    {% comment %} <img src="images/article_4.png" alt="covid"> {% endcomment %}
+                    <img src="{% static 'images/article_4.png' %}" alt="">
+                    <h1>Arkansas becomes first U.S. state to ban treatments for transgender youth</h1>
+                    <p>Overriding a veto by Governor Asa Hutchinson, Arkansas has become the first US state to
+                        ban
+                        certain types of treatment for transgender youth.</p>
+                    <div class="news-stats">
+                        <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                        10,543
+                    </div>
+                </section>
+                <section class="news-list">
+                    <section class="news">
+                        <h1>Eating our lunch: Biden points to China in development push</h1>
+                        <p>US President Joe Biden is pointing to a booming, ambitious China in his push for
+                            trillions of dollars in development spending.</p>
+                        <div class="news-stats">
+                            <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                            10,543
+                        </div>
+                    </section>
+                    <section class="news">
+                        <h1>World Bank chief expects G20 to extend debt payment freeze through end-2021</h1>
+                        <p>The World Bank president expects China, the US and other G20 major economies to
+                            extend a
+                            freeze in bilateral debt service payments through the end of 2021.</p>
+                        <div class="news-stats">
+                            <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                            10,543
+                        </div>
+                    </section>
+                    <section class="news">
+                        <h1>Eating our lunch: Biden points to China in development push</h1>
+                        <p>US President Joe Biden is pointing to a booming, ambitious China in his push for
+                            trillions of dollars in development spending.</p>
+                        <div class="news-stats">
+                            <img src="{% static 'icons/likes_dark.svg' %}" alt="">
+                            10,543
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block footer %}
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
+{% endblock footer %}
