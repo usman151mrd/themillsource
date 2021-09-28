@@ -1,4 +1,5 @@
 {% extends 'blog/layout/base.html' %}
+{% block title %} Article {% endblock title %}
 <!-- main start -->
 <!-- {% load static %} -->
 {% block content %}
@@ -7,17 +8,19 @@
     <section class="article-top-wrapper">
         <div class="article-reading-info">
             <span>
-                May 13, 2021
+                {% comment %} May 13, 2021 {% endcomment %}
+                {{post.post_date|date:'F m, Y'}}
                 <hr>
             </span>
             <span>Reading Time: 7 mins read</span>
         </div>
         <div class="article-title">
-            <p>Violence continues to escalate between Israelis and Palestinians</p>
+            <p>{{ post.post_title}}</p>
+            {% comment %} <p>Violence continues to escalate between Israelis and Palestinians</p> {% endcomment %}
         </div>
         <div class="article-row">
             <div class="article-author">
-                <p>by Caleb Moll and Brendan Monroe</p>
+                <p>by {{post.author}}</p>
                 <p>
                     Photo Source: Toby Melville, Reuters
                 </p>
@@ -31,113 +34,14 @@
             </div>
         </div>
     </section>
-    <section class="article-header">
-        {% comment %} <img src="images/article_1.png" alt="article"> {% endcomment %}
-        <img src="{% static 'images/article_1.png' %}" alt="">
-        <p>This is the most violence that the region has seen since the Israeli war on Gaza that lasted for
-            seven weeks in 2014. </p>
+    <section class="article-header">                
+        <img src="{{post.feature_image_url.url}}" alt="feature image"/>        
+            <p>{{head_line}}</p>
     </section>
     <section class="article-detail">
-        <p>The Gaza strip, also known as just Gaza, is Palestinian territory controlled and governed by
-            Palestinians. It’s located on a tiny strip of land between Egypt and Israel.</p>
-        {% comment %} <img src="images/article_2.png" alt=""> {% endcomment %}
-        <img src="{% static 'images/article_2.png' %}" alt="">
-        <ul>
-            <li>The territory of Gaza was promised to Palestine by Israel in 1994 after years of disputes over
-                the land
-                that had left many Palestinians without a place to call home.</li>
-            <li>Since 2007, Gaza has been governed by Hamas, a Palestinian Sunni-Islamic nationalist
-                organization.</li>
-            <li>
-                Israel, the United States and the European Union, among others, have labeled Hamas a terrorist
-                organization.
-            </li>
-            <li>Israel claims it’s the rightful owner of much of the land in and around Palestine and has been
-                building
-                settlements within Palestinian territory.</li>
-            <li>
-                These settlements were found to be illegal in 2004 by the International Court of Justice, but
-                Israel
-                still hasn’t removed these settlements.
-            </li>
-            <li>
-                As Israel has continued to expand into Palestinian territory in recent years, tensions between
-                the two
-                nations have escalated.
-            </li>
-        </ul>
-        <h2>What’s happened so far? </h2>
-        <ul>
-            <li>
-                On Monday, Hamas began firing rockets into Israel and Israel responded with airstrikes.
-            </li>
-            <li>
-                According to the Israeli military, since Monday, over 1,000 rockets have been fired from Gaza.
-                Most have been intercepted by Israel’s missile defense system.
-            </li>
-            <li>
-                But what was largely unexpected is how people have responded on the streets of Israeli cities,
-                with Israelis attacking Palestinians and Palestinians attacking Israelis.
-            </li>
-            <li>
-                According to Palestinian health officials, since Monday more than 69 Palestinians, including 17
-                children, have been killed in Gaza and hundreds more have been injured.
-            </li>
-            <li>
-                The United Nations has since warned of the threat of a “full-scale war.”
-            </li>
-        </ul>
-        {% comment %} <img src="images/article_3.png" alt=""> {% endcomment %}
-        <img src="{% static 'images/article_3.png' %}" alt="">
-        <h2>What started this recent escalation </h2>
-        <ul>
-            <li>This is the most violence that the region has seen since the Israeli war on Gaza that lasted for
-                seven weeks in 2014. </li>
-            <li> escalation of violence has taken place during Ramadan, a holy month for Muslims around the
-                world.</li>
-            <li> weekend, Israeli police used stun grenades and rubber bullets on Palestinians at the Al-Aqsa
-                Mosque. </li>
-            <li>Israeli police say that this was in response to rocks being thrown at the Western Wall where
-                thousands of Jews had come together to pray. </li>
-            <li>A spokesperson for the mosque has said that the clashes started after the Israeli police tried
-                to evacuate the area where many Palestinians sleep during Ramadan to let Israelis in. </li>
-        </ul>
-        <h2>How has the US responded to the violence?</h2>
-        <ul>
-            <li>US Secretary of State Anthony Blinken urged both sides to stop the violence during a call with
-                Israeli Prime Minister Benjamin Netanyahu.</li>
-            <li>Blinken emphasized the need “for Israelis and Palestinians to be able to live in safety and
-                security.” </li>
-            <li>The deputy secretary of state for Israel and Palestinian affairs, Hady Amr, is traveling to the
-                region to try to de-escalate tensions.</li>
-            <li>President Joe Biden also spoke to Prime Minister Netanyahu on Wednesday. </li>
-            <li>“My expectation and hope is this will be closing down sooner than later,” Biden said, while
-                expressing his “unwavering support for Israel’s security and for Israel’s legitimate right to
-                defend itself and its people, while protecting civilians.”</li>
-            <li>While Biden didn’t speak about the deaths of Palestinian citizens in Gaza from the Israeli
-                airstrikes, he did say that Israel had “a right to defend itself when you have thousands of
-                rockets flying into your territory.”</li>
-            <li>Martin S. Indyk, a former US ambassador to Israel, said that Biden is being pressured to take
-                more of an active stance.</li>
-            <li>Indyk also says that Biden needs to establish a dialogue with the Palestinians and make an
-                agreement for them possible as well.</li>
-        </ul>
-
+    {{post.post_content|safe }}        
     </section>
-    <section class="article-footer">
-        <!-- <section class="banner">
-                    <div class="subscription">
-                        <div class="news-letter">
-                            <strong>SUBSCRIBE TO THE TMS NEWSLETTER</strong>
-                            <div class="signup-form">
-                                <img src="icons/email-icon.svg" alt="email">
-                                <input type="text" placeholder="Email">
-                                <button type="submit">Sign up</button>
-                            </div>
-                            <p>By providing your email, you agree to our Privacy Policy</p>
-                        </div>
-                    </div>
-                </section> -->
+    <section class="article-footer">        
         <section class="article-rating">
             <div>Rate this explanation </div>
             <div>

@@ -4,6 +4,7 @@ from django.views import generic
 from .location import city
 from .models import *
 from django.utils import timezone
+import bs4
 from .forms import *
 
 
@@ -22,7 +23,11 @@ def detail_page(request, pk, **kwargs):
         seen = post.seen
         seen += 1
         Post.objects.filter(pk=pk).update(seen=seen)
-        context = {'post': post}
+        head_line = ''
+        soup = bs4.BeautifulSoup(post.post_content,features='lxml').h5
+        if soup is not None:
+            head_line = soup.get_text()
+        context = {'post': post,'head_line':head_line}
         return render(request, 'blog/article.html', context)
     except Exception as e:
         return HttpResponse(f"{e}")
