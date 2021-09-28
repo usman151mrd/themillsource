@@ -85,3 +85,6 @@ def send_us_your_pr_page(request):
 
 def advertise_page(request):
     return render(request, 'blog/advertise.html')
+
+def about_us(request):
+    return render(request, 'blog/contact-us.html')

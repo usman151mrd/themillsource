@@ -12,5 +12,6 @@ urlpatterns = [
     path('write-for-us/', views.write_for_us_page, name='write-for-us'),
     path('send-us-your-pr/', views.send_us_your_pr_page, name='send-us-your-pr'),
     path('advertise/', views.advertise_page, name='advertise'),
-    path('temp/', views.write_for_us_page, name='temp')
+    path('temp/', views.write_for_us_page, name='temp'),
+    path('contact-us',view=views.about_us, name='contact-us')
 ]

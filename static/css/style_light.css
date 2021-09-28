@@ -1348,3 +1348,102 @@ footer {
   border-top-right-radius: 1.875rem;
   margin-top: 2.5rem;
 }
+
+/* contact us  */
+.w-1130 {
+  max-width: 70.625rem;
+  margin: 0 auto;
+}
+.banner-sm {
+  margin-top: 1.875rem;
+  margin-bottom: 3.125rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.banner-sm > div:nth-child(1) {
+  padding: 2.5rem 7.1875rem;
+  background: var(--background-color-seven);
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 125%;
+  border-bottom-left-radius: 35px;
+  color: var(--text-color-two);
+}
+.banner-sm > div:nth-child(2) {
+  padding: 2.5rem 3.875rem;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 125%;
+
+  background: var(--background-color-two);
+  border-top-right-radius: 35px;
+  color: var(--text-color-one);
+}
+.banner-sm a {
+  color: var(--text-color-five);
+  text-decoration: none;
+}
+
+.h-ul h1 {
+  font-family: Constantine;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6875rem;
+  line-height: 140%;
+  color: var(--text-color-two);
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+.h-ul hr {
+  border: 1px solid var(--border-color-one);
+}
+.banner-lg {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border: 1px solid var(--border-color-one);
+  margin-top: 30px;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+.banner-lg > div:nth-child(1) {
+  padding: 40px 115px;
+}
+.banner-lg > div:nth-child(1) p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 25px;
+  margin: 0;
+  color: var(--text-color-two);
+}
+.banner-lg > div:nth-child(1) h2 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 125%;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: var(--text-color-two);
+}
+.banner-lg > div:nth-child(2) {
+  padding: 53px 62px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 125%;
+  background-color: var(--background-color-three);
+  border-top-right-radius: 35px;
+  color: var(--text-color-two);
+}
+
+.banner-lg a {
+  color: var(--text-color-five);
+  text-decoration: none;
+}

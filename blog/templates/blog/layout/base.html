@@ -30,8 +30,8 @@
                     <h1 class="menu-title">Discover</h1>
                     <div class="menu-body">
                         <a href="{% url 'blog:about-us' %}">About Us</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Contact</a>
+                        <a href="{% url 'blog:contact-us' %}">Careers</a>
+                        <a href="{% url 'blog:contact-us' %}">Contact</a>
                         <a href="{% url 'blog:advertise' %}">Advertise</a>
                         <a href="#">Archives</a>
                         <a href="{% url 'blog:write-for-us' %}">Write for us</a>
@@ -40,7 +40,7 @@
                         <a href="#">Terms of service</a>
                     </div>
                 </div>
-                {% comment %} <div class="menu-hot-topics">
+                 <div class="menu-hot-topics">
                     <h1 class="menu-title">Hot Topics</h1>
                     <div class="menu-body">
                         <a href="#">Crypto</a>
@@ -60,7 +60,7 @@
                         <a href="#">Space race</a>
                         <a href="#">Banking giants</a>
                     </div>
-                </div> {% endcomment %}
+                </div> 
                 <div class="menu-social">
                     <h1 class="menu-title">Follow us</h1>
                     <div>

@@ -1,0 +1,54 @@
+{% extends 'blog/layout/base.html' %}
+{% block title %} Contact Us {% endblock title %}
+<!-- main start -->
+<!-- {% load static %} -->
+{% block content %}
+<main>
+    <section class="about-header">
+        <section class="about-title">
+            <div class="text-right">
+                <img src="{% static 'icons/share.svg' %}" alt="share">
+            </div>
+            <hr>
+            <h2>Contact Us</h2>
+        </section>
+    </section>
+    <section class="banner-sm w-1130">
+        <div>
+            For correction requests, complaints/comments about our coverage email us at: hello@themilsource.com
+        </div>
+        <div>
+            For advertising enquiries
+            <a href="#">Click here</a>
+        </div>
+    </section>
+    <section class="h-ul w-1130">
+        <h1>Feel free to write to us</h1>
+        <hr>
+    </section>
+    <section class="banner-lg w-1130">
+        <div>
+            <h2>Email us at: tips@themilsource.com</h2>
+            <p>To share an encrypted or unencrypted news tip, firsthand account, or photos, install the Firefox and
+                Chrome extension, Mailvelope. Mailvelope will only encrypt the email content. For instructions, click
+                here.</p>
+        </div>
+        <div>
+            For information about our Privacy Policy visit our <a href="#">Privacy Policy & Terms</a>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block footer %}
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
+{% endblock footer %}

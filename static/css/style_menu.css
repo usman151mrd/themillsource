@@ -54,7 +54,7 @@
 }
 .menu-category {
   background-color: #eeefef;
-  padding: 2.5rem;
+  padding: 2.5rem 0;
 }
 .menu-title {
   font-family: Proxima Nova;
@@ -68,12 +68,12 @@
 }
 
 .menu-body {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 1.875rem 2.875rem;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  /* border-top-right-radius: 50px; */
+  /* border-bottom-left-radius: 50px; */
   /* height: 200px; */
-  display: grid;
+  /* display: grid; */
   /* row-gap: 10px; */
   column-gap: 0.625rem;
   /* grid-template-rows: 1fr; */
@@ -103,4 +103,15 @@
 }
 .menu-social h1 {
   margin: 0;
+}
+.menu-hot-topics{
+  background-color: var(--background-color-two);
+  
+}
+.menu-hot-topics h1,
+.menu-hot-topics a{
+  color: var(--text-color-one);
+}
+.menu-discover{
+  background-color: var(--background-color-five);
 }
