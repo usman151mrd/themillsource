@@ -249,6 +249,7 @@ p {
 }
 .news-with-image img{
   max-width: 34.6875rem;
+  /* max width 555px */
 }
 .news-with-image h1 {
   margin-top: 1.25rem;
