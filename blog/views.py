@@ -51,6 +51,14 @@ def home_page(request):
 def about_us_page(request):
     return render(request, 'blog/about_us.html')
 
+def about_us_page_two(request):    
+    return render(request, 'blog/about_us_2.html')
+
+def about_us_page_three(request):
+    return render(request, 'blog/about_us_3.html')
+
+def about_us_page_four(request):
+    return render(request, 'blog/about_us_4.html')        
 
 def write_for_us_page(request):
     if request.method == 'POST':
@@ -86,5 +94,5 @@ def send_us_your_pr_page(request):
 def advertise_page(request):
     return render(request, 'blog/advertise.html')
 
-def about_us(request):
+def contact_us(request):
     return render(request, 'blog/contact-us.html')

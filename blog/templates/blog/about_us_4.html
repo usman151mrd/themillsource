@@ -1,0 +1,87 @@
+  {% extends 'blog/layout/base.html' %}
+  {% load static %}
+  {% block content %}
+  <section class="about-header">
+      <section class="about-title">
+          <div>
+              <img src="{% static 'icons/share.svg' %}" alt="share">
+          </div>
+          <hr>
+          <h2>About Us</h2>
+      </section>
+      <section class="about-header-nav">
+          <div>
+              <p><a class="link" href="{% url 'blog:about-us'%}">Our mission </a></p>
+              <p><a class="link" href="{% url 'blog:what-drives-us'%}">What drives our news rooms</a></p>
+          </div>
+          <hr>
+          <div>
+              <p><a class="link" href="{% url 'blog:our-advertising-partners'%}">Our advertising partners</a></p>
+              <p class="active-nav"><a class="link" href="{% url 'blog:make-money-with-us'%}">How we make money</a></p>
+          </div>
+      </section>
+  </section>
+  <section class="about-mission">
+      <h2>How we make money</h2>
+      <hr>
+      <div>
+          <p>TMS (The Millennial Source Ltd.) is a privately held company with journalists, editors and
+              marketers around the world. We make money through advertising. More specifically, our
+              advertising revenue comes in the following forms:</p>
+          <div class="about-make-money">
+              <h4>Affiliate advertising partnerships: </h4>
+              <p>These are advertising partnerships between us and companies
+                  non-for-profits. After meeting their management and marketing team, we test their product
+                  and
+                  profile their company and provide an honest account of both. If you make a purchase of their
+                  product through our platform, we earn a commission.
+                  Content that is sponsored by an affiliate partner is clearly labeled as such.</p>
+
+              <h4>Advertising partners:</h4>
+              <p>These are highly-curated advertising partnerships between us and a very
+                  limited amount of businesses that we feel strongly have a product, purpose and values that
+                  align
+                  with ours and that you’ll enjoy. We earn a fee in exchange for this publicity. And again,
+                  content that is sponsored by an advertising partner is clearly labeled as such.</p>
+          </div>
+          <p>Content that is sponsored by an advertising partner will be clearly labeled as such. Our
+              editorial departments intentionally operate independent to our B2B division with no personnel
+              crossover. We vet our advertising partners through numerous questionnaires and interviews with
+              our specialist team to ensure there is an alignment in interest and values between us, you and
+              them. This phase is never missed and our requirements are never compromised. </p>
+      </div>
+  </section>
+  {% endblock content %}
+  {% block footer %}
+  <section class="banner article-banner">
+      <div class="subscription">
+          <div class="news-letter">
+              <h4>SUBSCRIBE TO THE TMS NEWSLETTER</h4>
+              <div class="signup-form">
+                  <img src="{% static 'icons/email_dark.svg' %}" alt="email">
+                  <input type="text" placeholder="Email">
+                  <button type="submit">Sign up</button>
+              </div>
+              <p>By providing your email, you agree to our Privacy Policy</p>
+          </div>
+          <div class="share">
+              <h2>Share this page using the link down below</h2>
+              <button class="copy-btn">
+                  <img src="{% static 'icons/copy-link.svg' %}" alt="copy link">
+                  <span>Copy link</span>
+              </button>
+          </div>
+      </div>
+  </section>
+  <section class="social">
+      <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+      <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+      <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+      <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+      <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+  </section>
+  <section class="copy-right">
+      The Millennial Source Ltd. 2021
+  </section>
+
+  {% endblock footer %}

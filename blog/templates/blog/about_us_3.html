@@ -1,0 +1,71 @@
+ {% extends 'blog/layout/base.html' %}
+ {% load static %}
+ {% block content %}
+ <section class="about-header">
+      <section class="about-title">
+          <div>
+              <img src="{% static 'icons/share.svg' %}" alt="share">
+          </div>
+          <hr>
+          <h2>About Us</h2>
+      </section>
+      <section class="about-header-nav">
+          <div>
+              <p><a class="link" href="{% url 'blog:about-us'%}">Our mission </a></p>
+              <p><a class="link" href="{% url 'blog:what-drives-us'%}">What drives our news rooms</a></p>
+          </div>
+          <hr>
+          <div>
+              <p class="active-nav"><a class="link" href="{% url 'blog:our-advertising-partners'%}">Our advertising partners</a></p>
+              <p ><a class="link" href="{% url 'blog:make-money-with-us'%}">How we make money</a></p>
+          </div>
+      </section>
+  </section>
+ <section class="about-mission">
+     <h2>Our advertising partners</h2>
+     <hr>
+     <div class="mission-detail">
+         <p>TMS works with a range of different sized companies but have a heavy focus on helping startups
+             get their brand and products known. In order to determine whether a brand is the right fit for
+             our readers, our senior editors meet with the founding team and upper management to deep dive
+             into the company to learn about their mission and vision, what they hope to achieve and what
+             they stand for.</p>
+         <span>
+             Have a question? Get in touch with our team here.
+         </span>
+     </div>
+ </section>
+ {% endblock content %}
+ {% block footer %}
+ <section class="banner article-banner">
+     <div class="subscription">
+         <div class="news-letter">
+             <h4>SUBSCRIBE TO THE TMS NEWSLETTER</h4>
+             <div class="signup-form">
+                 <img src="{% static 'icons/email_dark.svg' %}" alt="email">
+                 <input type="text" placeholder="Email">
+                 <button type="submit">Sign up</button>
+             </div>
+             <p>By providing your email, you agree to our Privacy Policy</p>
+         </div>
+         <div class="share">
+             <h2>Share this page using the link down below</h2>
+             <button class="copy-btn">
+                 <img src="{% static 'icons/copy-link.svg' %}" alt="copy link">
+                 <span>Copy link</span>
+             </button>
+         </div>
+     </div>
+ </section>
+ <section class="social">
+     <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+     <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+     <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+     <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+     <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+ </section>
+ <section class="copy-right">
+     The Millennial Source Ltd. 2021
+ </section>
+
+ {% endblock footer %}

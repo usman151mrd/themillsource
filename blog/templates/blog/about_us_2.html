@@ -1,0 +1,282 @@
+{% extends 'blog/layout/base.html' %}
+{% load static %}
+{% block content %}
+<section class="about-header">
+      <section class="about-title">
+          <div>
+              <img src="{% static 'icons/share.svg' %}" alt="share">
+          </div>
+          <hr>
+          <h2>About Us</h2>
+      </section>
+      <section class="about-header-nav">
+          <div>
+              <p><a class="link" href="{% url 'blog:about-us'%}">Our mission </a></p>
+              <p class="active-nav"><a class="link" href="{% url 'blog:what-drives-us'%}">What drives our news rooms</a></p>
+          </div>
+          <hr>
+          <div>
+              <p ><a class="link" href="{% url 'blog:our-advertising-partners'%}">Our advertising partners</a></p>
+              <p ><a class="link" href="{% url 'blog:make-money-with-us'%}">How we make money</a></p>
+          </div>
+      </section>
+  </section>
+<section class="about-news-topics">
+    <h2>What drives our newsroom</h2>
+    <hr>
+    <p>We focus on several key topics that matter to the future leaders of our world with a focus on the two
+        superpowers, America and China. If you feel as if there is a topic that matters that we’re not
+        talking about, let us know down below. </p>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>All Things Crypto</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_1.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_2.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>Economic Policy</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_3.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_4.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>Climate Change</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_4.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_5.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>Tech Giants</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_5.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_6.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>Startups</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_7.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_8.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>The future of work</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_9.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_10.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>Cultural movements</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_11.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_12.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="about-article">
+        <div class="article-topic-header">
+            <span>Relations between superpowers</span>
+            <span>
+                <img src="{% static 'icons/previous.svg' %}" alt="">
+                <img src="{% static 'icons/next.svg' %}" alt="">
+            </span>
+        </div>
+        <div class="article-topic-detail">
+            <div>
+                <img src="{% static 'images/about_13.png' %}" alt="">
+                <div>
+                    <p>Generational conflict and the war between generations</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+
+            <div>
+                <img src="{% static 'images/about_14.png' %}" alt="">
+                <div>
+                    <p>Arizona and Georgia are recounting votes … again. What does that mean?</p>
+                    <span>MAY 18, 2021</span>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+<section class="about-email-form">
+    <div class="email-form">
+        <h1>Is there something else we need to look into?</h1>
+        <div>
+            <input type="text" name="email" id="email" placeholder="Let Us Know.">
+            <input type="button" value="Send">
+            <hr>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+{% block footer %}
+<section class="banner article-banner">
+    <div class="subscription">
+        <div class="news-letter">
+            <h4>SUBSCRIBE TO THE TMS NEWSLETTER</h4>
+            <div class="signup-form">
+                <img src="{% static 'icons/email_dark.svg' %}" alt="email">
+                <input type="text" placeholder="Email">
+                <button type="submit">Sign up</button>
+            </div>
+            <p>By providing your email, you agree to our Privacy Policy</p>
+        </div>
+        <div class="share">
+            <h2>Share this page using the link down below</h2>
+            <button class="copy-btn">
+                <img src="{% static 'icons/copy-link.svg' %}" alt="copy link">
+                <span>Copy link</span>
+            </button>
+        </div>
+    </div>
+</section>
+<section class="social">
+    <img src="{% static 'icons/twitter_dark.svg' %}" alt="twitter">
+    <img src="{% static 'icons/linkedin_dark.svg' %}" alt="linked in">
+    <img src="{% static 'icons/facebook_dark.svg' %}" alt="Facebook">
+    <img src="{% static 'icons/bookmark_dark.svg' %}" alt="bookmark">
+    <img src="{% static 'icons/more_dark.svg' %}" alt="more">
+</section>
+<section class="copy-right">
+    The Millennial Source Ltd. 2021
+</section>
+
+{% endblock footer %}

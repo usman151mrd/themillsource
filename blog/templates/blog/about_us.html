@@ -2,25 +2,25 @@
 {% load static %}
 {% block content %}
 <section class="about-header">
-    <section class="about-title">
-        <div>
-            <img src="{% static 'icons/share.svg' %}" alt="share">
-        </div>
-        <hr>
-        <h2>About Us</h2>
-    </section>
-    <section class="about-header-nav">
-        <div>
-            <p class="active-nav">Our mission </p>
-            <p>What drives our news rooms</p>
-        </div>
-        <hr>
-        <div>
-            <p>Our advertising partners</p>
-            <p>How we make money</p>
-        </div>
-    </section>
-</section>
+      <section class="about-title">
+          <div>
+              <img src="{% static 'icons/share.svg' %}" alt="share">
+          </div>
+          <hr>
+          <h2>About Us</h2>
+      </section>
+      <section class="about-header-nav">
+          <div>
+              <p class="active-nav"><a class="link" href="{% url 'blog:about-us'%}">Our mission </a></p>
+              <p><a class="link" href="{% url 'blog:what-drives-us'%}">What drives our news rooms</a></p>
+          </div>
+          <hr>
+          <div>
+              <p><a class="link" href="{% url 'blog:our-advertising-partners'%}">Our advertising partners</a></p>
+              <p ><a class="link" href="{% url 'blog:make-money-with-us'%}">How we make money</a></p>
+          </div>
+      </section>
+  </section>
 <section class="about-mission">
     <h2>Our Mission</h2>
     <hr>
