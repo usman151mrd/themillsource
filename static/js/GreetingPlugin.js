@@ -24,7 +24,8 @@
       return this.each(function(){
         var $div = $(this);
   
-        $div.html(text + ' ' + username);
+        // $div.html(text + ' ' + username);
+        $div.html(text);
         // $div.css({
         //   'padding': '5px 10px',
         //   'backgroundColor': color,
