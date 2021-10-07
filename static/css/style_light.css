@@ -89,12 +89,16 @@ main {
   /* max-width: 70.625rem; */
   /* margin: 0 auto; */
 }
+.w-1000{
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
 /* banner */
-.banner,
-.twenty-four-news,
-.markets-wrapper,
-.hot-topics,
-.info-list ,
+/* .banner, */
+/* .twenty-four-news, */
+/* .markets-wrapper, */
+/* .hot-topics, */
+/* .info-list , */
 .article-top-wrapper,
 .sponser,
 .about-header,
@@ -109,6 +113,7 @@ main {
 .buss-pd,
 .buss-audience{
   max-width: 70.625rem;
+  /* max-width: 62.5rem; */
   margin: 0 auto;
 }
 .banner h1 {
@@ -152,15 +157,16 @@ p {
   border-bottom: 0.125rem solid var(--border-color-two);
 }
 .signup-form button {
-  padding: 0.6875rem 4.75rem;
+  padding: 0.6875rem 4.0625rem;
   background-color: var(--background-color-one);
   color: var(--text-color-two);
   font-weight: bold;
   border-radius: 0.1875rem;
+  width: max-content;
 }
 .signup-form input {
   margin-left: 0.9375rem;
-  width: 12.42rem;
+  width: 12rem;
   border: none;
   padding: 0.625rem 0;
   font-size: 1.125rem;
@@ -488,7 +494,7 @@ div.info-title {
 }
 .info-image img{
   /* margin-top: 2.5rem; */
-  /* width: 100%; */
+  width: 100%;
 }
 footer {
   background-color: var(--background-color-one);
