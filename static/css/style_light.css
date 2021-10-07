@@ -166,7 +166,7 @@ p {
 }
 .signup-form input {
   margin-left: 0.9375rem;
-  width: 12rem;
+  /* width: 12rem; */
   border: none;
   padding: 0.625rem 0;
   font-size: 1.125rem;
