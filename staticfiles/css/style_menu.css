@@ -82,6 +82,16 @@
   grid-auto-flow: column;
   align-items: center; */
 }
+
+.menu-hot-topics .menu-body {
+  display: grid;
+  column-gap: 0.625rem;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
 .menu-more .menu-body {
   row-gap: 0.8125rem;
 }
@@ -90,7 +100,7 @@
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 19px;
   text-transform: uppercase;
   margin-top: 20px;
@@ -108,10 +118,12 @@
   margin: 0;
 }
 .menu-discover,
-.menu-hot-topics,
 .menu-lifestyle,
 .menu-more {
   padding: 30px 150px 30px 40px;
+}
+.menu-hot-topics{
+  padding: 30px 10px 30px 40px;
 }
 .menu-more{
   background-color: var(--background-color-one);
