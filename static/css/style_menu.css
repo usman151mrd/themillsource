@@ -41,7 +41,7 @@
 }
 .menu-search input[type="text"] {
   border: none;
-  width: 85%;
+  /* width: 85%; */
   font-family: Proxima Nova;
   font-size: 18px;
   padding: 6px 15px;
@@ -105,7 +105,7 @@
   text-transform: uppercase;
   margin-top: 20px;
   text-decoration: none;
-  color: var(--text-color-two);
+  color: #000000;
 }
 .menu-social {
   display: flex;
@@ -126,17 +126,17 @@
   padding: 30px 10px 30px 40px;
 }
 .menu-more{
-  background-color: var(--background-color-one);
+  background-color: #ffffff /*var(--background-color-one)*/;
 }
 .menu-hot-topics {
-  background-color: var(--background-color-two);
+  background-color:#222222 /*var(--background-color-two)*/;
 }
 
 .menu-hot-topics h1,
 .menu-hot-topics a {
-  color: var(--text-color-one);
+  color: #ffffff /*var(--text-color-one)*/;
 }
 .menu-discover {
-  background-color: var(--background-color-five);
+  background-color: #eeefef /*var(--background-color-five)*/;
 }
 

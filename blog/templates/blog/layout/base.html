@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-light">
 
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
                         <a href="#">Terms of service</a>
                     </div>
                 </div>
-                 <div class="menu-hot-topics">
+                <div class="menu-hot-topics">
                     <h1 class="menu-title">Reads On</h1>
                     <div class="menu-body">
                         <a href="#">Crypto</a>
@@ -62,7 +62,7 @@
                         <a href="#">Health</a>
                         <a href="#">Travel</a>
                         <a href="#">Entertainment</a>
-                        <a href="#">Technology</a>                        
+                        <a href="#">Technology</a>
                     </div>
                 </div>
                 {% comment %} <div class="menu-more">
@@ -73,7 +73,7 @@
                         <a href="#">Space race</a>
                         <a href="#">Banking giants</a>
                     </div>
-                </div>  {% endcomment %}
+                </div> {% endcomment %}
                 <div class="menu-social">
                     <h1 class="menu-title">Follow us</h1>
                     <div>
@@ -92,11 +92,23 @@
             <div class="inner">
                 <div class="left-content">
                     <div class="menu-button">
-                        <img src="{% static 'icons/Menu_dark.svg' %}" alt="menu" id="show-button">
+                        {% comment %} <img src="{% static 'icons/Menu_dark.svg' %}" alt="menu" id="show-button">
+                        {% endcomment %}
+                        <svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg" id="show-button">
+                            <line y1="13.25" x2="20" y2="13.25" stroke="black" stroke-width="1.5" />
+                            <line y1="18.25" x2="20" y2="18.25" stroke="black" stroke-width="1.5" />
+                            <line y1="23.25" x2="20" y2="23.25" stroke="black" stroke-width="1.5" />
+                        </svg>
                     </div>
 
                     <div class="view">
-                        <img src="{% static 'icons/top_views.svg' %}" alt="views">
+                        {% comment %} <img src="{% static 'icons/top_views.svg' %}" alt="views" class="icon-view">
+                        {% endcomment %}
+                        <svg width="78" height="44" viewBox="0 0 78 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M76.8699 21.6458C76.7015 21.4434 59.6971 1 38.9977 1C18.2982 1 1.29393 21.4434 1.12546 21.6458C1.0443 21.746 1 21.871 1 22C1 22.129 1.0443 22.2541 1.12546 22.3542C1.29393 22.5566 18.2982 43 38.9977 43C59.6971 43 76.7015 22.5679 76.8699 22.3655C76.954 22.2644 77 22.1371 77 22.0056C77 21.8741 76.954 21.7468 76.8699 21.6458Z"
+                                fill="#EEEFEF" stroke="#38B6FF" />
+                        </svg>
                         <div class="overlay-text">25K</div>
                     </div>
 
@@ -104,17 +116,19 @@
                 <div class="center-content">
                     <a href="{% url 'blog:home' %}">
                         {% comment %} <h1 class="title">TMS</h1> {% endcomment %}
-                        <img src="{% static 'images/logo_dark.png' %}" alt="logo" height="36">
+                        <img src="{% static 'images/logo_dark.png' %}" alt="logo" height="36" id="site-logo">
+                        {% comment %} <img src="{% static 'images/logo_light.png' %}" alt="logo" height="36"> {% endcomment %}
                     </a>
                 </div>
 
                 <div class="right-content">
 
                     <div class="theme-change-button">
-                        <img src="{% static 'icons/light.svg' %}" alt="">
+                        {% comment %} <img src="{% static 'icons/light.svg' %}" alt=""> {% endcomment %}
+                        <button id="switch" onclick="toggleTheme()">Switch</button>
                     </div>
                     <div class="current-date">
-                        {% now " l, F d, Y" %}                        
+                        {% now " l, F d, Y" %}
                         <hr>
                     </div>
                 </div>
@@ -124,9 +138,9 @@
 
         {% endblock %}
         <footer>
-        {% block footer %}
-        
-        {% endblock footer %}        
+            {% block footer %}
+
+            {% endblock footer %}
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
