@@ -2,7 +2,9 @@ import datetime
 from django.contrib.auth.models import User
 from django.core import validators
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
+from django.template.defaultfilters import slugify
 from django.utils.translation import gettext_lazy as _
 
 
@@ -69,6 +71,17 @@ class Post(models.Model):
         return self.schedule_time < timezone.now() and self.post_status == 'published'
 
 
+class Comments(models.Model):
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    user_name = models.CharField(max_length=250)
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.user_name
+
+
 class PressRelease(models.Model):
     company_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, validators=[validators.EmailValidator])
@@ -108,3 +121,33 @@ class NewsSource(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Menu(models.Model):
+    title = models.CharField(max_length=100)
+    parent = models.ForeignKey('self', blank=True, null=True, on_delete=models.CASCADE, related_name='children')
+    url = models.URLField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Article(models.Model):
+    menus = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    slug = models.SlugField(null=False, unique=True)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('article_detail', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):  # new
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)

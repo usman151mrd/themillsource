@@ -80,28 +80,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'themisource.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
-        # 'default': {
-        #     'ENGINE': 'django.db.backends.postgresql',
-        #     'NAME': 'tms',
-        #     'USER': 'usman',
-        #     'PASSWORD': 'Fa@12345',
-        #     'HOST': '127.0.0.1',
-        #     'PORT': '5432',
-        # },
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME':   'tms',  # 'themisource',
-            'USER': 'tms',
-            'PASSWORD': '0cxqVdnP2j7LLxv2',
-            'HOST': 'app-c63a9ccd-ad0e-4248-b14f-a5a07e6c4882-do-user-8599880-0.b.db.ondigitalocean.com',
-            'PORT': '25060',
+            'NAME': 'tms',
+            'USER': 'musmansarwar',
+            'PASSWORD': '',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
         },
+        # 'default': {
+        #     'ENGINE': 'django.db.backends.postgresql',
+        #     'NAME':   'tms',  # 'themisource',
+        #     'USER': 'tms',
+        #     'PASSWORD': '0cxqVdnP2j7LLxv2',
+        #     'HOST': 'app-c63a9ccd-ad0e-4248-b14f-a5a07e6c4882-do-user-8599880-0.b.db.ondigitalocean.com',
+        #     'PORT': '25060',
+        # },
         "sqlite": {
             "ENGINE": "django.db.backends.sqlite3",
             "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
@@ -113,8 +112,6 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
     DATABASES = {
         "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
     }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -134,7 +131,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -147,7 +143,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -169,3 +164,5 @@ GEOIP_PATH = os.path.join(BASE_DIR, "GeoLite2")
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
