@@ -85,22 +85,22 @@ WSGI_APPLICATION = 'themisource.wsgi.application'
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'tms',
-            'USER': 'musmansarwar',
-            'PASSWORD': '',
-            'HOST': '127.0.0.1',
-            'PORT': '5432',
-        },
         # 'default': {
         #     'ENGINE': 'django.db.backends.postgresql',
-        #     'NAME':   'tms',  # 'themisource',
-        #     'USER': 'tms',
-        #     'PASSWORD': '0cxqVdnP2j7LLxv2',
-        #     'HOST': 'app-c63a9ccd-ad0e-4248-b14f-a5a07e6c4882-do-user-8599880-0.b.db.ondigitalocean.com',
-        #     'PORT': '25060',
+        #     'NAME': 'tms',
+        #     'USER': 'musmansarwar',
+        #     'PASSWORD': '',
+        #     'HOST': '127.0.0.1',
+        #     'PORT': '5432',
         # },
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME':   'tms',  # 'themisource',
+            'USER': 'tms',
+            'PASSWORD': '0cxqVdnP2j7LLxv2',
+            'HOST': 'app-c63a9ccd-ad0e-4248-b14f-a5a07e6c4882-do-user-8599880-0.b.db.ondigitalocean.com',
+            'PORT': '25060',
+        },
         "sqlite": {
             "ENGINE": "django.db.backends.sqlite3",
             "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
