@@ -136,7 +136,7 @@ class Menu(models.Model):
 
 
 class Article(models.Model):
-    menus = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE, related_name='menus')
     title = models.CharField(max_length=255)
     body = models.TextField()
     slug = models.SlugField(null=False, unique=True)
