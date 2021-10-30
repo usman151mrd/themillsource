@@ -124,7 +124,7 @@ class NewsSource(models.Model):
 
 
 class Menu(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, unique=True)
     parent = models.ForeignKey('self', blank=True, null=True, on_delete=models.CASCADE, related_name='children')
     url = models.URLField(blank=True, null=True)
     is_static = models.BooleanField(default=False)
