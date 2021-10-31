@@ -24,10 +24,10 @@ def detail_page(request, pk, **kwargs):
         seen += 1
         Post.objects.filter(pk=pk).update(seen=seen)
         head_line = ''
-        soup = bs4.BeautifulSoup(post.post_content,features='lxml').h5
+        soup = bs4.BeautifulSoup(post.post_content, features='lxml').h5
         if soup is not None:
             head_line = soup.get_text()
-        context = {'post': post,'head_line':head_line}
+        context = {'post': post, 'head_line': head_line}
         return render(request, 'blog/article.html', context)
     except Exception as e:
         return HttpResponse(f"{e}")
@@ -43,7 +43,7 @@ def home_page(request):
     # else:
     lifestyle_list = Post.objects.filter(category=2, schedule_time__lt=timezone.now(), post_status='published')[:3]
 
-    external_resources = NewsSource.objects.order_by('-created_at')[:3]
+    external_resources = NewsSource.objects.all()[:4]
     context = {'news_list': news_list, 'lifestyle': lifestyle_list, 'news_source_list': external_resources}
     return render(request, 'blog/home.html', context)
 
@@ -51,14 +51,18 @@ def home_page(request):
 def about_us_page(request):
     return render(request, 'blog/about_us.html')
 
-def about_us_page_two(request):    
+
+def about_us_page_two(request):
     return render(request, 'blog/about_us_2.html')
+
 
 def about_us_page_three(request):
     return render(request, 'blog/about_us_3.html')
 
+
 def about_us_page_four(request):
-    return render(request, 'blog/about_us_4.html')        
+    return render(request, 'blog/about_us_4.html')
+
 
 def write_for_us_page(request):
     if request.method == 'POST':
@@ -76,7 +80,6 @@ def write_for_us_page(request):
 
 
 def send_us_your_pr_page(request):
-
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         press = PRForm(request.POST, request.FILES)
@@ -94,5 +97,12 @@ def send_us_your_pr_page(request):
 def advertise_page(request):
     return render(request, 'blog/advertise.html')
 
+
 def contact_us(request):
     return render(request, 'blog/contact-us.html')
+
+
+def article_page(request, menu_id):
+    article = Menu.objects.filter(menu=menu_id)
+    context = {'article': article}
+    return render(request, 'blog/menu_page.html', context=context)
