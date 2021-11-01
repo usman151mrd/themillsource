@@ -33,23 +33,24 @@
         <h1>IN THE LAST 24 HOURS...</h1>
         <hr>
         <div class="new-container">
-            {% for news in news_list %}
+            {% comment %} {% for news in news_list %} {% endcomment %}
+            {% for news in news_source_list %}
             {% if forloop.counter  == 1 %}
             <section class="news-with-image">
-                <img src="{{ news.feature_image_url.url }}" alt="covid">
+                <img src='{{ news.image.url }}' alt="covid">
                 {% else %}
                 <section class="news">
                     {% endif %}
 
                     <h1>
                         <a href="{% url 'blog:detail' news.id %}">
-                            {{ news.post_title }}
+                            {{ news.title }}
                         </a>
                     </h1>
 
                     <p>
-                        {% with news.meta_description as content%}
-                        {{ content |slice:100 }}
+                        {% with news.description as content%}
+                        {{ content|truncatewords_html:30|safe|striptags}}
 
                         {% endwith %}
                     </p>
@@ -114,20 +115,56 @@
                 </div>
             </section>
 
-            {% for lf in news_source_list %}
-                <h4>{{lf.title}}</h4>
+            {% for lf in news_list %}
+            <h4>{{lf.title}}</h4>
+            <p>{{lf.description}}</p>
             {% endfor %}
 
             <section class="hot-topics w-1000">
                 <h1>The biggest topics driving our newsroom</h1>
+                {% for lf in news_list %}
+                {% if forloop.counter|divisibleby:2 %}
                 <div class="topic">
+                    <div class="text-holder">
+                        <div class="topic-title">
+                            {% comment %} While transgender rights are making gains at the federal level, states are
+                            pushing back {% endcomment %}
+                            {{lf.post_title}}
+                        </div>
+                        <div class="topic-detail">
+                            <div>The rundown:</div>
+                            <p>
+                                {% with lf.meta_description as content %}
+                                {{content |truncatewords_html:25|safe|striptags}}
+                                {% endwith %}
+                                {% comment %} Though 2021 has brought the transgender community some victories thanks to
+                                the new Biden
+                                administration, it has continued to be a tough year for trans rights at the state level.
+                                There are currently multiple state bills being considered that would limit medical
+                                access for trans youth and bar trans athletes from competing according to their gender
+                                identity. {% endcomment %}
+                            </p>
+                            <br>
+                            <div>Why it matters: </div>
+                            <p>
+                            {% with lf.meta_description as content %}
+                                {{content |truncatewords_html:25|safe|striptags}}
+                                {% endwith %}
+                            {% comment %} While Joe Biden is making a point of being an ally to the LGBTQ community, state
+                                legislatures can still pass anti-trans legislation so long as more comprehensive
+                                pro-trans legislation hasn’t been passed at the federal level. Many of these proposed
+                                laws will likely set up legal battles that could force the Supreme Court to rule more
+                                directly on what constitutes discrimination based on gender identity. {% endcomment %}
+                                
+                                </p>
+                        </div>
+                    </div>
                     <div class="image-holder">
-                        <img src="{% static 'images/topic1_image.png' %}" alt="" srcset="">
+                        {% comment %} <img src="{% static 'images/topic2_image.png' %}" alt="" srcset=""> {% endcomment %}
+                        <img src="{{lf.feature_image_url.url}}" alt="" srcset="">
                         <hr>
                         <div class="image-holder-footer">
                             <div class="icon-comments">
-                                {% comment %} <img src="{% static 'icons/comments_dark.svg' %}" alt="" srcset="">
-                                {% endcomment %}
                                 <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -135,33 +172,63 @@
                                         fill="black" />
                                 </svg>
                             </div>
-                            {% comment %} <div>
-                                <img src="{% static 'icons/likes_dark.svg' %}" alt="" srcset="">
-                                <span>10,543</span>
-                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="topic">
+                    <div class="image-holder">
+                        {% comment %} <img src="{% static 'images/topic1_image.png' %}" alt="" srcset=""> {% endcomment %}
+                        <img src="{{lf.feature_image_url.url}}" alt="" srcset="">
+                        <hr>
+                        <div class="image-holder-footer">
+                            <div class="icon-comments">
+                                <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.2702 0H1.89118C0.996653 0 0 0.708706 0 1.72549V16.7843C0 17.8011 0.996653 18.5098 1.89118 18.5098H5.04315V22.902C5.04315 23.3462 5.31202 23.7462 5.72429 23.9159C5.86077 23.9727 6.00419 24 6.14603 24C6.43317 24 6.71527 23.8886 6.92645 23.6784L12.1193 18.5098H24.2702C25.0292 18.5098 25.8462 17.9699 25.8462 16.7843V1.72549C25.8462 0.539922 25.0292 0 24.2702 0ZM23.6391 16.3137H11.6623C11.3698 16.3137 11.0893 16.4295 10.8822 16.6353L7.24953 20.251V17.4118C7.24953 16.805 6.75562 16.3137 6.14634 16.3137H2.20638V2.19608H23.6398L23.6391 16.3137ZM6.30394 7.84314H19.5422C20.1518 7.84314 20.6454 7.35153 20.6454 6.7451C20.6454 6.13867 20.1518 5.64706 19.5422 5.64706H6.30394C5.69466 5.64706 5.20075 6.13867 5.20075 6.7451C5.20075 7.35153 5.69466 7.84314 6.30394 7.84314ZM6.30394 12.2353H12.9231C13.5327 12.2353 14.0263 11.7437 14.0263 11.1373C14.0263 10.5308 13.5327 10.0392 12.9231 10.0392H6.30394C5.69466 10.0392 5.20075 10.5308 5.20075 11.1373C5.20075 11.7437 5.69466 12.2353 6.30394 12.2353Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="text-holder">
                         <div class="topic-title">
-                            Will 2024 see both Biden and Trump running for president again?
+                            {% comment %} Will 2024 see both Biden and Trump running for president again?
+                            {% endcomment %}
+                            {{lf.post_title}}
                         </div>
                         <div class="topic-detail">
                             <div>The rundown:</div>
                             <p>
-                                Biden has recently confirmed his intentions to run again in 2024 and though Trump seems
+                                {% with lf.meta_description as content %}
+                                {{content |truncatewords_html:25|safe|striptags}}
+                                {% endwith %}
+
+                                {% comment %} Biden has recently confirmed his intentions to run again in 2024 and
+                                though Trump seems
                                 to still be on the fence, the ticket could end up looking like it did in 2020. But with
                                 the Biden administration putting VP Harris front and center, it could also end up
-                                looking like a very different campaign altogether.</p>
+                                looking like a very different campaign altogether. {% endcomment %}
+                            </p>
                             <br>
                             <div>Why it matters: </div>
-                            <p>Biden’s age has been a subject of criticism from Republicans and Trump has so far only
+                            <p>
+                            {% with lf.meta_description as content %}
+                                {{content |truncatewords_html:25|safe|striptags}}
+                                {% endwith %}
+                            {% comment %} Biden’s age has been a subject of criticism from Republicans and Trump has so far only
                                 been a one-term president, so others seem to be gearing up to take their places in their
                                 respective parties. The question that might matter the most, though, is how the
-                                Republican Party can fare in a post-Trump world.</p>
+                                Republican Party can fare in a post-Trump world. {% endcomment %}
+                                
+                                </p>
                         </div>
                     </div>
                 </div>
-                <div class="topic">
+                {% endif %}
+                {% endfor %}
+                {% comment %} <div class="topic">
                     <div class="text-holder">
                         <div class="topic-title">
                             While transgender rights are making gains at the federal level, states are pushing back
@@ -188,8 +255,6 @@
                         <hr>
                         <div class="image-holder-footer">
                             <div class="icon-comments">
-                                {% comment %} <img src="{% static 'icons/comments_dark.svg' %}" alt="" srcset="">
-                                {% endcomment %}
                                 <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -199,15 +264,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="topic">
+                </div> {% endcomment %}
+                {% comment %} <div class="topic">
                     <div class="image-holder">
                         <img src="{% static 'images/topic3_image.png' %}" alt="" srcset="">
                         <hr>
                         <div class="image-holder-footer">
                             <div class="icon-comments">
-                                {% comment %} <img src="{% static 'icons/comments_dark.svg' %}" alt="" srcset="">
-                                {% endcomment %}
                                 <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -236,7 +299,7 @@
                                 of color, to unify behind a federal election law that would make voting easier.</p>
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </section>
 
             <section class="info-list w-1000">
@@ -255,7 +318,7 @@
                             </button>
                         </div>
                         <div class="info-detail">
-                            {{news.meta_description| slice:150}}
+                            {{news.meta_description| slice:150 }}
                         </div>
                     </div>
                     <div class="info-image">

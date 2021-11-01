@@ -34,7 +34,7 @@ def detail_page(request, pk, **kwargs):
 
 
 def home_page(request):
-    news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now(), post_status='published')[:4]
+    news_list = Post.objects.filter(category=1, schedule_time__lt=timezone.now(), post_status='published')[:3]
     # _city = city(request)
     lifestyle_list = []
     # if Post.objects.filter(city=_city, category=2).count() > 0:
