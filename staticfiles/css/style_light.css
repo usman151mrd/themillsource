@@ -470,6 +470,7 @@ p {
 } */
 .image-holder > img {
   margin-bottom: 3.75rem;
+  max-width: 34.6875rem;
 }
 .image-holder-footer {
   margin-top: 0.9375rem;
