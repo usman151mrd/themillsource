@@ -43,7 +43,7 @@
                     {% endif %}
 
                     <h1>
-                        <a href="{% url 'blog:detail' news.id %}">
+                        <a href="{{news.url}}">
                             {{ news.title }}
                         </a>
                     </h1>
@@ -129,7 +129,9 @@
                         <div class="topic-title">
                             {% comment %} While transgender rights are making gains at the federal level, states are
                             pushing back {% endcomment %}
-                            {{lf.post_title}}
+                            <a href="{% url 'blog:detail' lf.id%}">
+                                {{lf.post_title}}
+                            </a>
                         </div>
                         <div class="topic-detail">
                             <div>The rundown:</div>
@@ -147,20 +149,22 @@
                             <br>
                             <div>Why it matters: </div>
                             <p>
-                            {% with lf.meta_description as content %}
+                                {% with lf.meta_description as content %}
                                 {{content |truncatewords_html:25|safe|striptags}}
                                 {% endwith %}
-                            {% comment %} While Joe Biden is making a point of being an ally to the LGBTQ community, state
+                                {% comment %} While Joe Biden is making a point of being an ally to the LGBTQ community,
+                                state
                                 legislatures can still pass anti-trans legislation so long as more comprehensive
                                 pro-trans legislation hasn’t been passed at the federal level. Many of these proposed
                                 laws will likely set up legal battles that could force the Supreme Court to rule more
                                 directly on what constitutes discrimination based on gender identity. {% endcomment %}
-                                
-                                </p>
+
+                            </p>
                         </div>
                     </div>
                     <div class="image-holder">
-                        {% comment %} <img src="{% static 'images/topic2_image.png' %}" alt="" srcset=""> {% endcomment %}
+                        {% comment %} <img src="{% static 'images/topic2_image.png' %}" alt="" srcset="">
+                        {% endcomment %}
                         <img src="{{lf.feature_image_url.url}}" alt="" srcset="">
                         <hr>
                         <div class="image-holder-footer">
@@ -178,7 +182,8 @@
                 {% else %}
                 <div class="topic">
                     <div class="image-holder">
-                        {% comment %} <img src="{% static 'images/topic1_image.png' %}" alt="" srcset=""> {% endcomment %}
+                        {% comment %} <img src="{% static 'images/topic1_image.png' %}" alt="" srcset="">
+                        {% endcomment %}
                         <img src="{{lf.feature_image_url.url}}" alt="" srcset="">
                         <hr>
                         <div class="image-holder-footer">
@@ -196,7 +201,9 @@
                         <div class="topic-title">
                             {% comment %} Will 2024 see both Biden and Trump running for president again?
                             {% endcomment %}
+                            <a href="{% url 'blog:detail' lf.id%}">
                             {{lf.post_title}}
+                            </a>
                         </div>
                         <div class="topic-detail">
                             <div>The rundown:</div>
@@ -214,15 +221,16 @@
                             <br>
                             <div>Why it matters: </div>
                             <p>
-                            {% with lf.meta_description as content %}
+                                {% with lf.meta_description as content %}
                                 {{content |truncatewords_html:25|safe|striptags}}
                                 {% endwith %}
-                            {% comment %} Biden’s age has been a subject of criticism from Republicans and Trump has so far only
+                                {% comment %} Biden’s age has been a subject of criticism from Republicans and Trump has
+                                so far only
                                 been a one-term president, so others seem to be gearing up to take their places in their
                                 respective parties. The question that might matter the most, though, is how the
                                 Republican Party can fare in a post-Trump world. {% endcomment %}
-                                
-                                </p>
+
+                            </p>
                         </div>
                     </div>
                 </div>
