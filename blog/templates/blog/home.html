@@ -113,6 +113,11 @@
                         bibendum luctus vestibulum.</p>
                 </div>
             </section>
+
+            {% for lf in news_source_list %}
+                <h4>{{lf.title}}</h4>
+            {% endfor %}
+
             <section class="hot-topics w-1000">
                 <h1>The biggest topics driving our newsroom</h1>
                 <div class="topic">
