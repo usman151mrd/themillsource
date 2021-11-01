@@ -124,10 +124,10 @@ class NewsSource(models.Model):
 
 
 class Menu(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, unique=True)
     parent = models.ForeignKey('self', blank=True, null=True, on_delete=models.CASCADE, related_name='children')
-    url = models.URLField()
-
+    url = models.URLField(blank=True, null=True)
+    is_static = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -136,7 +136,7 @@ class Menu(models.Model):
 
 
 class Article(models.Model):
-    menus = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE, related_name='menus')
     title = models.CharField(max_length=255)
     body = models.TextField()
     slug = models.SlugField(null=False, unique=True)
